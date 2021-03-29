@@ -1,0 +1,9 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'NotoSansJP';
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--main-text);
+	background-color: var(--bg-color);
+}

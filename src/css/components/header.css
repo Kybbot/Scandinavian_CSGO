@@ -1,0 +1,8 @@
+.header {
+	padding: 20px 0;
+}
+
+.header__logo {
+	font-size: 22px;
+	font-weight: 500;
+}

@@ -1,0 +1,31 @@
+.member {
+	font-size: 14px;
+	max-width: 120px;
+}
+
+.member__nickname {
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.member__fullName {
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.member__age {
+	font-weight: 100;
+}
+
+.member img {
+	height: 120px;
+	width: 120px;
+	border-radius: var(--radius);
+	margin-bottom: 5px;
+}
+
+.member .member__fullName {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
