@@ -10,3 +10,5 @@ export { default as PlayersList } from './PlayersList';
 export { default as AdminPlayer } from './AdminPlayer';
 export { default as Sort } from './Sort';
 export { default as Statistics } from './Statistics';
+export { default as AddNewTeam } from './AddNewTeam';
+export { default as AddNewPlayer } from './AddNewPlayer';

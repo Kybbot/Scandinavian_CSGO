@@ -5,8 +5,8 @@ const initialState = {
 	countedPlayers: {},
 };
 
-var byField = function (field, reverse, primer) {
-	var key = primer
+let byField = function (field, reverse, primer) {
+	let key = primer
 		? function (x) {
 				return primer(x[field]);
 		  }
@@ -50,6 +50,9 @@ const allPlayers = (state = initialState, action) => {
 				case 'desc':
 					newItems = state.items.sort(byField('country', true, false));
 					break;
+				default:
+					newItems = state.items.sort(byField('country', false, false));
+					break;
 			}
 
 			return {
@@ -65,6 +68,9 @@ const allPlayers = (state = initialState, action) => {
 					break;
 				case 'desc':
 					newItems = state.items.sort(byField('team', true, false));
+					break;
+				default:
+					newItems = state.items.sort(byField('team', false, false));
 					break;
 			}
 

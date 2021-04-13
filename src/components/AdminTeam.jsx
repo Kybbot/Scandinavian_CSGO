@@ -74,7 +74,14 @@ const AdminTeam = ({
 		});
 	};
 
-	console.log('AdminTeam Redered');
+	const deleteBtnHandler = (event) => {
+		event.preventDefault();
+		fetch(`/teams/${id}`, {
+			method: 'DELETE',
+		});
+	};
+
+	console.log('AdminTeam Rendered');
 
 	return (
 		<div className='admin-team'>
@@ -91,53 +98,78 @@ const AdminTeam = ({
 			{edit && (
 				<form onSubmit={formHandler} className='admin-form'>
 					<fieldset className='admin-form__fieldset'>
+						<label className='admin-form__label'>Name of team</label>
 						<input
 							className='admin-form__input'
 							value={form.name}
 							name='name'
 							type='text'
 							placeholder='Name'
+							pattern="[A-Z][A-Za-z' -_]+"
+							required
 							onChange={handleInputChange}
 						/>
+						<label className='admin-form__label'>Name of country</label>
 						<input
 							className='admin-form__input'
 							value={form.country}
 							name='country'
 							type='text'
 							placeholder='Country'
+							pattern="[A-Z][A-Za-z' -_]+"
+							required
 							onChange={handleInputChange}
 						/>
 					</fieldset>
 					<fieldset className='admin-form__fieldset'>
+						<label className='admin-form__label'>Year of based</label>
 						<input
 							className='admin-form__input'
 							value={form.based}
 							name='based'
 							type='text'
 							placeholder='Based'
+							pattern='\d+'
+							required
 							onChange={handleInputChange}
 						/>
+						<label className='admin-form__label'>Link to webSite</label>
 						<input
 							className='admin-form__input'
 							value={form.webSite}
 							name='webSite'
 							type='text'
 							placeholder='WebSite'
+							pattern='^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
+							required
 							onChange={handleInputChange}
 						/>
 					</fieldset>
-					<textarea
-						value={textarea.currentMembers}
-						name='currentMembers'
-						className='admin-form__desc--little'
-						onChange={handleTextareaChange}></textarea>
-					<textarea
-						value={textarea.pastMembers}
-						name='pastMembers'
-						className='admin-form__desc--little'
-						onChange={handleTextareaChange}></textarea>
+					<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
+						<label className='admin-form__label'>
+							Names of current members
+						</label>
+						<textarea
+							value={textarea.currentMembers}
+							name='currentMembers'
+							className='admin-form__desc admin-form__desc--full'
+							required
+							onChange={handleTextareaChange}></textarea>
+					</fieldset>
+					<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
+						<label className='admin-form__label'>Names of past members</label>
+						<textarea
+							value={textarea.pastMembers}
+							name='pastMembers'
+							className='admin-form__desc admin-form__desc--full'
+							required
+							onChange={handleTextareaChange}></textarea>
+					</fieldset>
 					<button className='btn' type='submit'>
 						Update
+					</button>
+					<button onClick={deleteBtnHandler} className='btn' type='button'>
+						Delete
 					</button>
 				</form>
 			)}

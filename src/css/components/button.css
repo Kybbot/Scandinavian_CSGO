@@ -1,11 +1,10 @@
 .btn {
-	font-family: 'NotoSansJP';
+	font-family: 'NotoSansJP', sans-serif;
 	font-weight: 300;
 	padding: 10px;
-	margin-right: var(--gap);
 	border: none;
 	border-radius: var(--radius);
-	width: 80px;
+	min-width: 80px;
 	background: linear-gradient(145deg, #ffffff, #dedede);
 	cursor: pointer;
 	outline: none;

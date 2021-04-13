@@ -19,13 +19,13 @@ const sortItems = [
 const AllPlayers = () => {
 	const dispatch = useDispatch();
 
+	const { items, countedPlayers } = useSelector(({ allPlayers }) => allPlayers);
+
 	React.useEffect(() => {
 		if (!items.length) {
 			dispatch(fetchPlayers());
 		}
 	}, []);
-
-	const { items, countedPlayers } = useSelector(({ allPlayers }) => allPlayers);
 
 	const countrysSelectChange = React.useCallback((type) => {
 		dispatch(sortCountrys(type));

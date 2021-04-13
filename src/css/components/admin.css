@@ -1,3 +1,16 @@
+.admin__btns {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.players-list,
+.teams-list {
+	margin-bottom: var(--gap);
+}
+
 .players-list__info,
 .teams-list__info {
 	position: relative;
@@ -84,10 +97,17 @@
 
 .admin-form {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	gap: var(--gap);
 	padding: 10px;
+}
+
+.admin-form__label {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 5px;
 }
 
 .admin-form__fieldset {
@@ -95,6 +115,14 @@
 	flex-direction: column;
 	border: none;
 	padding: 0;
+}
+
+.admin-form__fieldset--full {
+	flex: 1 1 auto;
+}
+
+.admin-form__fieldset--w25 {
+	width: 25%;
 }
 
 .admin-form__fieldset input {
@@ -121,6 +149,11 @@
 	box-shadow: var(--shadow);
 	outline: none;
 	padding: 5px;
+	resize: vertical;
+}
+
+.admin-form__desc--full {
+	width: 100%;
 }
 
 .admin-form__desc--little {

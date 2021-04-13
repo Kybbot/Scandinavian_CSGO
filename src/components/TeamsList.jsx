@@ -1,11 +1,13 @@
 import React from 'react';
 
+import AddNewTeam from './AddNewTeam';
 import AdminTeam from './AdminTeam';
 
 const TeamsList = ({ data }) => {
 	console.log('TeamList Rendered');
 	return (
 		<div className='teams-list'>
+			<AddNewTeam />
 			<div className='teams-list__info'>
 				<div>#</div>
 				<div>Name</div>

@@ -14,6 +14,7 @@
 	align-items: center;
 	padding: 10px;
 	margin-bottom: var(--gap);
+	opacity: 0.5;
 }
 
 .all-players__info::after {

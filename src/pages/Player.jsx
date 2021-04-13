@@ -34,8 +34,8 @@ const Player = () => {
 								alt={player.country}
 							/>
 						</div>
-						<h1 className='player__nickname'>{player.nickname}</h1>
-						<h2 className='player__fullname'>{player.fullName}</h2>
+						<h2 className='player__nickname'>{player.nickname}</h2>
+						<h3 className='player__fullname'>{player.fullName}</h3>
 					</div>
 					<div className='player__info'>
 						<p className='player__story'>{player.story}</p>
@@ -45,7 +45,7 @@ const Player = () => {
 							{player.instagram ? (
 								<a
 									target='_blank'
-									href={player.instagram}
+									href={`https://www.instagram.com/${player.instagram}`}
 									rel='noopener noreferrer'>
 									<Instagram size='24' />
 								</a>

@@ -5,13 +5,6 @@
 	scroll-behavior: smooth;
 }
 
-html,
-body,
-#root,
-.App {
-	height: 100%;
-}
-
 :root {
 	--main-text: #2c2b2f;
 	--accent-color: #ffd000;

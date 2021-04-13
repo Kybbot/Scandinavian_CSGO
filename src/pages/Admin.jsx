@@ -41,12 +41,14 @@ const Admin = () => {
 	return (
 		<div className='admin'>
 			<div className='container'>
-				<button className='btn' onClick={teamsBtnHandler}>
-					Teams
-				</button>
-				<button className='btn' onClick={playersBtnHandler}>
-					Players
-				</button>
+				<div className='admin__btns'>
+					<button className='btn' onClick={teamsBtnHandler}>
+						Teams
+					</button>
+					<button className='btn' onClick={playersBtnHandler}>
+						Players
+					</button>
+				</div>
 				{!state.isClosedTeams && <TeamsList data={teams} />}
 				{!state.isClosedPlayers && <PlayersList data={players} />}
 			</div>

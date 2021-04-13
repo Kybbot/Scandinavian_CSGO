@@ -1,8 +1,31 @@
 .header {
-	padding: 20px 0;
+	padding: 20px 0 40px 0;
 }
 
 .header__logo {
 	font-size: 22px;
 	font-weight: 500;
+	margin: 0;
+}
+
+.header__nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: calc(var(--gap) * 2);
+	flex: 1 0 auto;
+}
+
+.header__link {
+	color: var(--main-text);
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.header__link:hover {
+	text-decoration: underline;
+}
+
+.header__date {
+	font-weight: 300;
 }

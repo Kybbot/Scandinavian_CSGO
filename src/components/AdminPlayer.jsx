@@ -55,6 +55,13 @@ const AdminPlayer = ({
 		});
 	};
 
+	const deleteBtnHandler = (event) => {
+		event.preventDefault();
+		fetch(`/players/${id}`, {
+			method: 'DELETE',
+		});
+	};
+	console.log('AdminPlayer Rendered');
 	return (
 		<div className='admin-player'>
 			<div className='admin-player__container'>
@@ -73,64 +80,91 @@ const AdminPlayer = ({
 			{edit && (
 				<form onSubmit={formHandler} className='admin-form'>
 					<fieldset className='admin-form__fieldset'>
+						<label className='admin-form__label'>Player nickname</label>
 						<input
 							className='admin-form__input'
 							value={form.nickname}
 							name='nickname'
 							type='text'
 							placeholder='Nickname'
+							pattern='\w+'
+							required
 							onChange={handleInputChange}
 						/>
+						<label className='admin-form__label'>Player name</label>
 						<input
 							className='admin-form__input'
 							value={form.fullName}
-							name='name'
+							name='fullName'
 							type='text'
-							placeholder='Nmae'
+							placeholder='Name'
+							pattern="[A-Z][A-Za-z' -_]+"
+							required
 							onChange={handleInputChange}
 						/>
+					</fieldset>
+					<fieldset className='admin-form__fieldset'>
+						<label className='admin-form__label'>Player age</label>
 						<input
 							className='admin-form__input'
 							value={form.age}
 							name='age'
 							type='text'
 							placeholder='Age'
+							pattern='[0-9]{4}-[0-9]{2}-[0-9]{2}'
+							required
 							onChange={handleInputChange}
 						/>
-					</fieldset>
-					<fieldset className='admin-form__fieldset'>
+						<label className='admin-form__label'>Player country</label>
 						<input
 							className='admin-form__input'
 							value={form.country}
 							name='country'
 							type='text'
 							placeholder='Country'
+							pattern="[A-Z][A-Za-z' -_]+"
+							required
 							onChange={handleInputChange}
 						/>
+					</fieldset>
+					<fieldset className='admin-form__fieldset'>
+						<label className='admin-form__label'>Player team</label>
 						<input
 							className='admin-form__input'
 							value={form.team}
 							name='team'
 							type='text'
 							placeholder='Team'
+							pattern="[A-Z][A-Za-z' -_]+"
+							required
 							onChange={handleInputChange}
 						/>
+						<label className='admin-form__label'>Player instagram</label>
 						<input
 							className='admin-form__input'
 							value={form.instagram}
 							name='instagram'
 							type='text'
-							placeholder='Instagram'
+							placeholder='Instagram nickname'
+							pattern='^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$'
+							required
 							onChange={handleInputChange}
 						/>
 					</fieldset>
-					<textarea
-						className='admin-form__desc'
-						value={form.story}
-						name='story'
-						onChange={handleInputChange}></textarea>
+					<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
+						<label className='admin-form__label'>Player story</label>
+						<textarea
+							className='admin-form__desc admin-form__desc--full'
+							value={form.story}
+							name='story'
+							required
+							onChange={handleInputChange}></textarea>
+					</fieldset>
 					<button className='btn' type='submit'>
 						Update
+					</button>
+					<button onClick={deleteBtnHandler} className='btn' type='button'>
+						Delete
 					</button>
 				</form>
 			)}

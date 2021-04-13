@@ -5,8 +5,15 @@ const Header = () => (
 	<header className='header'>
 		<div className='container'>
 			<div className='row'>
-				<div className='header__logo'>Scandinavian CSGO</div>
-				<Link to='/allPlayers'>All Players</Link>
+				<h1 className='header__logo'>Scandinavian CSGO</h1>
+				<nav className='header__nav'>
+					<Link className='header__link' to='/'>
+						Home
+					</Link>
+					<Link className='header__link' to='/allPlayers'>
+						All Players
+					</Link>
+				</nav>
 				<div className='header__date'>30.09.2020</div>
 			</div>
 		</div>
