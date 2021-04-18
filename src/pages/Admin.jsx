@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { PlayersList, TeamsList } from '../components';
+import { useAuth } from '../context/AuthContext';
+import { useHistory } from 'react-router-dom';
 
 const Admin = () => {
 	const [teams, setTeams] = React.useState([]);
@@ -36,6 +38,15 @@ const Admin = () => {
 		});
 	};
 
+	const { logout } = useAuth();
+
+	const history = useHistory();
+
+	const handleLogout = () => {
+		logout();
+		history.push('/admin/login');
+	};
+
 	console.log('Admin Rendered');
 
 	return (
@@ -47,6 +58,9 @@ const Admin = () => {
 					</button>
 					<button className='btn' onClick={playersBtnHandler}>
 						Players
+					</button>
+					<button className='btn' onClick={handleLogout}>
+						Log Out
 					</button>
 				</div>
 				{!state.isClosedTeams && <TeamsList data={teams} />}

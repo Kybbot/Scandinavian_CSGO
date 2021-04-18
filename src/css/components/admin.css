@@ -104,6 +104,20 @@
 	padding: 10px;
 }
 
+.admin-form--column {
+	flex-direction: column;
+}
+
+.admin-form__signup,
+.admin-form__login {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: var(--blocks-bg);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
 .admin-form__label {
 	font-size: 14px;
 	font-weight: 300;

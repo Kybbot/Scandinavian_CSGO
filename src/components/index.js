@@ -12,3 +12,6 @@ export { default as Sort } from './Sort';
 export { default as Statistics } from './Statistics';
 export { default as AddNewTeam } from './AddNewTeam';
 export { default as AddNewPlayer } from './AddNewPlayer';
+export { default as Signup } from './Signup';
+export { default as Login } from './Login';
+export { default as PrivateRoute } from './PrivateRoute';
