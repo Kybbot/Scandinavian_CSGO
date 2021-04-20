@@ -26,8 +26,6 @@ const Panel = ({ name, members, close }) => {
 		setHeight(isclose ? `${content.current.scrollHeight}px` : '0px');
 	};
 
-	console.log('Panel Rendered');
-
 	return (
 		<div className='panel'>
 			<div className='panel__name'>
@@ -47,7 +45,7 @@ const Panel = ({ name, members, close }) => {
 						<div key={member.nickname} className='member'>
 							<Link to={`/${member.nickname}`}>
 								<img
-									src={img + member.photo}
+									src={img + (member.photo ? member.photo : 'blankplayer.svg')}
 									alt={member.nickname}
 									onClick={() => dispatch(findPlayer(member.nickname))}
 								/>
@@ -62,7 +60,7 @@ const Panel = ({ name, members, close }) => {
 						</div>
 					))
 				) : (
-					<div>Пусто</div>
+					<div>Empty</div>
 				)}
 			</div>
 		</div>

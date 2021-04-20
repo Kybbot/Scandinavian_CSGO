@@ -2,9 +2,10 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setTeam, setShowAbout, setMembers } from '../redux/actions/teams';
 
+const img = 'data/teams-img/';
+
 const Team = React.memo(({ team }) => {
 	const dispatch = useDispatch();
-	const img = 'data/teams-img/';
 
 	const click = (event) => {
 		let teamName = event.target.getAttribute('data-name');
@@ -12,8 +13,6 @@ const Team = React.memo(({ team }) => {
 		dispatch(setMembers());
 		dispatch(setShowAbout(true));
 	};
-
-	console.log('Team Rendered');
 
 	return (
 		<div className='team' data-name={team.name} onClick={click}>

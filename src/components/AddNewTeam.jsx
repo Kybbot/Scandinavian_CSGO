@@ -51,13 +51,13 @@ const AddNewTeam = () => {
 
 		fetch(`/teams/`, {
 			method: 'POST',
-			body: JSON.stringify(form),
 			headers: {
 				'Content-Type': 'application/json',
 			},
-		});
+			body: JSON.stringify(form),
+		}).then((response) => console.log(response));
 	};
-	console.log('AddNewTeam Rendered');
+
 	return (
 		<form className='admin-form' onSubmit={formHandler}>
 			<fieldset className='admin-form__fieldset'>

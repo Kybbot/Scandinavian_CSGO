@@ -8,7 +8,6 @@ import About from './About';
 const Teams = () => {
 	const dispatch = useDispatch();
 	const { items, showAbout, players } = useSelector(({ teams }) => teams);
-	console.log('Teams Rendered');
 
 	React.useEffect(() => {
 		if (!players.length) {

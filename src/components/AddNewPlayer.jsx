@@ -29,13 +29,13 @@ const AddNewPlayer = () => {
 
 		fetch(`/players/`, {
 			method: 'POST',
-			body: JSON.stringify(form),
 			headers: {
 				'Content-Type': 'application/json',
 			},
+			body: JSON.stringify(form),
 		});
 	};
-	console.log('AddNewPlayer Rendered');
+
 	return (
 		<form onSubmit={formHandler} className='admin-form'>
 			<fieldset className='admin-form__fieldset'>
@@ -106,7 +106,6 @@ const AddNewPlayer = () => {
 					type='text'
 					placeholder='Instagram nickname'
 					pattern='^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$'
-					required
 					onChange={handleInputChange}
 				/>
 			</fieldset>
@@ -119,7 +118,6 @@ const AddNewPlayer = () => {
 					type='text'
 					placeholder='player.webp'
 					pattern='.*\.(jpe?g|png|webp)$'
-					required
 					onChange={handleInputChange}
 				/>
 			</fieldset>

@@ -68,6 +68,7 @@
 .admin-team__img {
 	height: 40px;
 	width: 40px;
+	object-fit: contain;
 }
 
 .admin-player__nickname,
@@ -153,6 +154,12 @@
 	box-shadow: var(--shadow);
 	outline: none;
 	padding: 5px;
+	transition: var(--transition);
+}
+
+.admin-form__input:active,
+.admin-form__input:focus {
+	box-shadow: var(--outline);
 }
 
 .admin-form__desc {
@@ -164,6 +171,12 @@
 	outline: none;
 	padding: 5px;
 	resize: vertical;
+	transition: var(--transition);
+}
+
+.admin-form__desc:active,
+.admin-form__desc:focus {
+	box-shadow: var(--outline);
 }
 
 .admin-form__desc--full {

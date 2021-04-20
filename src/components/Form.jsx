@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { fetchTeams, setShowAbout } from '../redux/actions/teams';
 
-const countrys = ['Sweden', 'Denmark', 'Finland'];
+const countrys = ['Sweden', 'Denmark', 'Finland', 'Mix'];
 
 const Form = () => {
 	const dispatch = useDispatch();
@@ -19,8 +19,6 @@ const Form = () => {
 		dispatch(fetchTeams(country));
 		event.preventDefault();
 	};
-
-	console.log('Form Rendered');
 
 	return (
 		<div className='country-form'>

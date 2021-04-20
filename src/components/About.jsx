@@ -6,7 +6,6 @@ import Panel from './Panel';
 const About = () => {
 	const { members } = useSelector(({ teams }) => teams);
 
-	console.log('About Rendered');
 	return (
 		<div className='about w-100'>
 			<Panel

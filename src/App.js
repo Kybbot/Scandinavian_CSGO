@@ -5,7 +5,6 @@ import { Header, Signup, Login, PrivateRoute } from './components';
 import { AuthProvider } from './context/AuthContext';
 
 const App = () => {
-	console.log('App Rendered');
 	return (
 		<div className='App'>
 			<Header />

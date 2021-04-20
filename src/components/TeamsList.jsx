@@ -4,7 +4,6 @@ import AddNewTeam from './AddNewTeam';
 import AdminTeam from './AdminTeam';
 
 const TeamsList = ({ data }) => {
-	console.log('TeamList Rendered');
 	return (
 		<div className='teams-list'>
 			<AddNewTeam />

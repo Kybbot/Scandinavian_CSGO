@@ -13,8 +13,6 @@ const Sort = React.memo(({ items, name, onClickSort }) => {
 		setVisiblePopup(!visiblePopup);
 	};
 
-	console.log('Sort Rendered');
-
 	return (
 		<div className='sort'>
 			<div className='sort__label'>

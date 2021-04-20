@@ -20,6 +20,7 @@
 .team img {
 	height: 100px;
 	width: 100px;
+	object-fit: contain;
 }
 
 .team__info {

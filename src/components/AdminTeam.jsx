@@ -67,21 +67,25 @@ const AdminTeam = ({
 
 		fetch(`/teams/${id}`, {
 			method: 'PUT',
-			body: JSON.stringify(form),
 			headers: {
 				'Content-Type': 'application/json',
 			},
-		});
+			body: JSON.stringify(form),
+		}).then((response) => console.log(response));
 	};
 
 	const deleteBtnHandler = (event) => {
 		event.preventDefault();
-		fetch(`/teams/${id}`, {
-			method: 'DELETE',
-		});
-	};
+		let question = window.confirm('Delete this team?');
 
-	console.log('AdminTeam Rendered');
+		if (question) {
+			fetch(`/teams/${id}`, {
+				method: 'DELETE',
+			});
+		} else {
+			return;
+		}
+	};
 
 	return (
 		<div className='admin-team'>

@@ -47,8 +47,6 @@ const Admin = () => {
 		history.push('/admin/login');
 	};
 
-	console.log('Admin Rendered');
-
 	return (
 		<div className='admin'>
 			<div className='container'>

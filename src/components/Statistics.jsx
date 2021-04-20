@@ -10,7 +10,7 @@ const Statistics = React.memo(({ items }) => {
 			<div
 				className='statistics__item'
 				key={key}
-				style={{ backgroundImage: `url(${flag + key + '-map.png'})` }}>
+				style={{ backgroundImage: `url(${flag + key + '-map.webp'})` }}>
 				<img src={flag + key + '.png'} alt={key} className='statistics__img' />
 				<div className='statistics__container'>
 					<div className='statistics__country'>{key}</div>
@@ -19,7 +19,6 @@ const Statistics = React.memo(({ items }) => {
 			</div>
 		);
 	}
-	console.log('Statistics Rendered');
 	return <div className='statistics'>{statistics}</div>;
 });
 

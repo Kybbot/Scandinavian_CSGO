@@ -12,8 +12,6 @@ const Player = () => {
 	const img = 'data/players-img/';
 	const flag = 'data/countrys/';
 
-	console.log('Player Rendered');
-
 	return (
 		<div className='player'>
 			<div className='container'>
@@ -25,7 +23,7 @@ const Player = () => {
 							</Link>
 							<img
 								className='player__photo'
-								src={img + player.photo}
+								src={img + (player.photo ? player.photo : 'blankplayer.svg')}
 								alt={player.nickname}
 							/>
 							<img

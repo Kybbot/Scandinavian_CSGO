@@ -35,8 +35,6 @@ const AllPlayers = () => {
 		dispatch(sortTeams(type));
 	}, []);
 
-	console.log('AllPlayers Rendered');
-
 	return (
 		<div className='all-players'>
 			<div className='container'>
@@ -69,7 +67,7 @@ const AllPlayers = () => {
 							<LazyLoad height={40} once offset={20}>
 								<img
 									className='all-players__img'
-									src={img + photo}
+									src={img + (photo ? photo : 'blankplayer.svg')}
 									alt={nickname}
 								/>
 							</LazyLoad>

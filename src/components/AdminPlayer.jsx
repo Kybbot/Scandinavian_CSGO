@@ -48,25 +48,35 @@ const AdminPlayer = ({
 
 		fetch(`/players/${id}`, {
 			method: 'PUT',
-			body: JSON.stringify(form),
 			headers: {
 				'Content-Type': 'application/json',
 			},
+			body: JSON.stringify(form),
 		});
 	};
 
 	const deleteBtnHandler = (event) => {
 		event.preventDefault();
-		fetch(`/players/${id}`, {
-			method: 'DELETE',
-		});
+		let question = window.confirm('Delete this team?');
+
+		if (question) {
+			fetch(`/players/${id}`, {
+				method: 'DELETE',
+			});
+		} else {
+			return;
+		}
 	};
-	console.log('AdminPlayer Rendered');
+
 	return (
 		<div className='admin-player'>
 			<div className='admin-player__container'>
 				<LazyLoad height={40} once offset={20}>
-					<img className='admin-player__img' src={img + photo} alt={nickname} />
+					<img
+						className='admin-player__img'
+						src={img + (photo ? photo : 'blankplayer.svg')}
+						alt={nickname}
+					/>
 				</LazyLoad>
 				<div className='admin-player__nickname'>{nickname}</div>
 				<div className='admin-player__name'>{fullName}</div>

@@ -4,7 +4,6 @@ import AddNewPlayer from './AddNewPlayer';
 import AdminPlayer from './AdminPlayer';
 
 const PlayersList = ({ data }) => {
-	console.log('PlayersList Rendered');
 	return (
 		<div className='players-list'>
 			<AddNewPlayer />

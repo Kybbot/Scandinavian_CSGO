@@ -14,7 +14,7 @@ const Header = () => (
 						All Players
 					</Link>
 				</nav>
-				<div className='header__date'>30.09.2020</div>
+				<div className='header__date'>20.04.2021</div>
 			</div>
 		</div>
 	</header>

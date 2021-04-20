@@ -6,13 +6,13 @@
       "country": "Sweden",
       "based": 1999,
       "webSite": "https://shop.nip.gl/",
-      "logo": "nip.png",
+      "logo": "nip.webp",
       "members": {
         "currentMembers": [
           "hampus",
           "REZ",
           "Plopski",
-          "twist",
+          "ztr",
           "nawwk"
         ],
         "pastMembers": [
@@ -26,7 +26,8 @@
           "allu",
           "draken",
           "pyth",
-          "dennis"
+          "dennis",
+          "twist"
         ]
       }
     },
@@ -36,12 +37,12 @@
       "country": "Sweden",
       "based": 2004,
       "webSite": "https://www.fnatic.com/",
-      "logo": "fnatic.png",
+      "logo": "fnatic.svg",
       "members": {
         "currentMembers": [
           "KRIMZ",
           "JW",
-          "flusha",
+          "Jackinho",
           "Brollan",
           "Golden"
         ],
@@ -57,7 +58,8 @@
           "pronax",
           "znajder",
           "Devilwalk",
-          "MODDII"
+          "MODDII",
+          "flusha"
         ]
       }
     },
@@ -67,13 +69,13 @@
       "country": "Sweden",
       "based": 2003,
       "webSite": "http://dignitas.gg/",
-      "logo": "dignitas.png",
+      "logo": "dignitas.webp",
       "members": {
         "currentMembers": [
           "fOrest",
-          "GeT_RiGhT",
+          "Lekr0",
           "friberg",
-          "Xizt",
+          "HEAP",
           "hallzerk"
         ],
         "pastMembers": [
@@ -92,7 +94,9 @@
           "Magisk",
           "RUBINO",
           "k0nfig",
-          "MSL"
+          "MSL",
+          "GeT_RiGhT",
+          "Xizt"
         ]
       }
     },
@@ -102,21 +106,21 @@
       "country": "Denmark",
       "based": 2016,
       "webSite": "http://astralis.gg/",
-      "logo": "astralis.png",
+      "logo": "astralis.svg",
       "members": {
         "currentMembers": [
           "device",
           "dupreeh",
           "gla1ve",
           "Magisk",
-          "es3tag"
+          "Xyp9x"
         ],
         "pastMembers": [
-          "Xyp9x",
           "kjaerbye",
           "karrigan",
           "cajunb",
-          "JUGi"
+          "JUGi",
+          "es3tag"
         ]
       }
     },
@@ -126,7 +130,7 @@
       "country": "Denmark",
       "based": 2017,
       "webSite": "https://www.north.gg/",
-      "logo": "north.png",
+      "logo": "north.svg",
       "members": {
         "currentMembers": [
           "aizy",
@@ -154,13 +158,13 @@
       "country": "Denmark",
       "based": 2016,
       "webSite": "https://heroic.gg/",
-      "logo": "heroic.png",
+      "logo": "heroic.svg",
       "members": {
         "currentMembers": [
           "cadiaN",
+          "refrezh",
           "stavn",
-          "b0RUP",
-          "niko",
+          "sjuush",
           "TeSeS"
         ],
         "pastMembers": [
@@ -175,28 +179,54 @@
           "Snappi",
           "valde",
           "Friis",
-          "gla1ve"
+          "gla1ve",
+          "b0RUP",
+          "niko"
         ]
       }
     },
     {
       "id": 7,
       "name": "Ence",
-      "country": "Finland",
+      "country": "Mix",
       "based": 2013,
       "webSite": "https://ence.gg",
       "logo": "ence.png",
       "members": {
         "currentMembers": [
           "allu",
+          "Snappi",
+          "doto"
+        ],
+        "pastMembers": [
+          "Jamppi",
+          "Aleksib",
           "sergej",
           "Aerial",
           "suNny",
           "xseveN"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "HAVU",
+      "country": "Finland",
+      "based": 2017,
+      "webSite": "https://havu.gg/",
+      "logo": "havu.svg",
+      "members": {
+        "currentMembers": [
+          "xseveN",
+          "Aerial",
+          "ZOREE",
+          "sLowi",
+          "jemi"
         ],
         "pastMembers": [
-          "Jamppi",
-          "Aleksib"
+          "doto",
+          "Aleksib",
+          "sergej"
         ]
       }
     }
@@ -231,7 +261,7 @@
       "age": "1993-08-12",
       "photo": "flusha.webp",
       "country": "Sweden",
-      "team": "Fnatic",
+      "team": "GORILLAZ",
       "instagram": "",
       "story": "Robin 'flusha' Rönnquist (born August 12, 1993) is a Swedish professional Counter-Strike: Global Offensive player and former Counter-Strike player. He is regarded as one of the most consistent players in the scene, known as the cornerstone for his team as well as a star player with the ability to carry his team to victory. The Swede joined Fnatic in late 2013 and has since then won a total of three Majors as well as numerous other premier tournaments. After an incredibly successful run in one of the greatest teams of all time, flusha was benched from Fnatic and was signed by Cloud9. After 6 months of inactivity, Fnatic announced his return to the organization."
     },
@@ -297,7 +327,7 @@
       "age": "1994-12-12",
       "photo": "twist.webp",
       "country": "Sweden",
-      "team": "NiP",
+      "team": "Lemondogs",
       "instagram": "twistcs1",
       "story": "Simon 'twist' Eliasson (born December 12, 1994) is a Swedish professional Counter-Strike: Global Offensive player and former professional Counter-Strike: Source player. He mainly plays the role of the rifler but is also very capable of handling the AWP."
     },
@@ -341,7 +371,7 @@
       "age": "1990-05-29",
       "photo": "get-right.webp",
       "country": "Sweden",
-      "team": "Dignitas",
+      "team": "No team",
       "instagram": "get_rightcs",
       "story": "Christopher 'GeT_RiGhT' Alesund (born May 29, 1990) is a Swedish professional Counter-Strike: Global Offensive player and former professional Counter-Strike player who is currently an inactive member of Dignitas. He is widely considered one of the best players in Counter-Strike history, having been ranked #2 in 2010 and 2011 in CS and #1 in 2013 and 2014 during the early years of CS:GO by HLTV. In September 2019, he stepped down from Ninjas in Pyjamas after over seven years playing under their banner, during which he participated in the team's historic 87-0 map win streak on LAN between August 2012 and April 2013 as well as five consecutive Major finals, winning one at ESL One Cologne 2014. GeT_RiGhT reunited with former Ninjas in Pyjamas teammates Patrik 'f0rest' Lindberg, Richard 'Xizt' Landström, Adam 'friberg' Friberg, and Robin 'Fifflaren' Johansson in a revamped Dignitas lineup in January 2020."
     },
@@ -374,7 +404,7 @@
       "age": "1991-02-22",
       "photo": "xizt.webp",
       "country": "Sweden",
-      "team": "Dignitas",
+      "team": "No team",
       "instagram": "OfficialXizt",
       "story": "Richard 'Xizt' Landström (born February 22, 1991) is a Swedish professional Counter-Strike: Global Offensive and former Counter-Strike player. He spent a long and almost six-year tenure as the in-game leader for Ninjas in Pyjamas, leading the team to many victories over the years, including a Major title before ending his streak by being benched in February 2018 following a string of poor results. He reunited with his old teammates Christopher 'GeT_RiGhT' Alesund, Patrik 'f0rest' Lindberg, Adam 'friberg' Friberg and Robin 'Fifflaren' Johansson under Dignitas' first lineup in January 2020."
     },
@@ -704,7 +734,7 @@
       "age": "1995-11-29",
       "photo": "es3tag.webp",
       "country": "Denmark",
-      "team": "Astralis",
+      "team": "No team",
       "instagram": "es3tag",
       "story": "Patrick 'es3tag' Hansen (born November 29, 1995) is a Danish professional Counter-Strike: Global Offensive player."
     },
@@ -770,7 +800,7 @@
       "age": "1998-05-28",
       "photo": "niko.webp",
       "country": "Denmark",
-      "team": "Heroic",
+      "team": "OG",
       "instagram": "officialnikocs",
       "story": "Nikolaj 'niko' Kristensen (born May 28, 1998) is a Danish professional Counter-Strike: Global Offensive player."
     },
@@ -792,7 +822,7 @@
       "age": "1999-09-29",
       "photo": "b0rup.webp",
       "country": "Denmark",
-      "team": "Heroic",
+      "team": "No team",
       "instagram": "b0rupcsgo",
       "story": "Johannes 'b0RUP' Borup (born September 29, 1999) is a Danish professional Counter-Strike: Global Offensive player."
     },
@@ -869,7 +899,7 @@
       "age": "2002-03-01",
       "photo": "sergej.webp",
       "country": "Finland",
-      "team": "ENCE",
+      "team": "GORILLAZ",
       "instagram": "sergejcs",
       "story": "Jere 'sergej' Salo (born March 1, 2002) is a Finnish professional Counter-Strike: Global Offensive player."
     },
@@ -880,7 +910,7 @@
       "age": "1993-06-11",
       "photo": "aerial.webp",
       "country": "Finland",
-      "team": "ENCE",
+      "team": "HAVU",
       "instagram": "jussilajani",
       "story": "Jani 'Aerial' Jussila (born June 11, 1993) is a Finnish professional Counter-Strike: Global Offensive player."
     },
@@ -891,7 +921,7 @@
       "age": "1994-08-24",
       "photo": "sunny.webp",
       "country": "Finland",
-      "team": "ENCE",
+      "team": "GORILLAZ",
       "instagram": "sunnycsgo",
       "story": "Miikka 'suNny' Kemppi (born August 24, 1994) is a Finnish professional Counter-Strike: Global Offensive and former professional Counter-Strike player."
     },
@@ -924,10 +954,108 @@
       "age": "1994-08-14",
       "photo": "xseven.webp",
       "country": "Finland",
-      "team": "HAVU Gaming",
+      "team": "HAVU",
       "instagram": "samilaasanen",
       "story": "Sami 'xseveN' Laasanen (born August 14, 1994) is a Finnish professional Counter-Strike: Global Offensive and former professional Counter-Strike: Source player."
+    },
+    {
+      "id": 67,
+      "nickname": "ztr",
+      "fullName": "Erik Gustafsson",
+      "age": "2003-08-02",
+      "photo": "ztr.webp",
+      "country": "Sweden",
+      "team": "Nip",
+      "instagram": "",
+      "story": "Erik 'ztr' Gustafsson (born August 2, 2003) is a Swedish professional Counter-Strike: Global Offensive player. He was previously banned from Valve-sponsored events due to a VAC ban issued in 2015, but has been unbanned following Counter-Strike's 'New RMR Eligibility Guidelines' blog post."
+    },
+    {
+      "id": 68,
+      "nickname": "Jackinho",
+      "fullName": "Jack Ström Mattsson",
+      "age": "1999-03-07",
+      "photo": "",
+      "country": "Sweden",
+      "team": "Fnatic",
+      "instagram": "jackinho177",
+      "story": "Jack 'Jackinho' Ström Mattsson (born March 7, 1999) is a Swedish professional Counter-Strike: Global Offensive player who plays for Fnatic as the AWPer."
+    },
+    {
+      "id": 69,
+      "nickname": "HEAP",
+      "fullName": "Ludvig Alonso",
+      "age": "1999-12-24",
+      "photo": "",
+      "country": "Sweden",
+      "team": "Dignitas",
+      "instagram": "",
+      "story": "Ludvig 'HEAP' Alonso (born December 24, 1999) is a Swedish Counter-Strike: Global Offensive player who currently plays as a lurker for Dignitas."
+    },
+    {
+      "id": 70,
+      "nickname": "refrezh",
+      "fullName": "Ismail Ali",
+      "age": "1998-02-19",
+      "photo": "refrezh.webp",
+      "country": "Denmark",
+      "team": "Heroic",
+      "instagram": "refrezhCS",
+      "story": "Ismail 'refrezh' Ali (born February 19, 1998) is a Danish professional Counter-Strike: Global Offensive player who currently plays for Heroic."
+    },
+    {
+      "id": 71,
+      "nickname": "sjuush",
+      "fullName": "Rasmus Beck",
+      "age": "1999-01-03",
+      "photo": "sjuush.webp",
+      "country": "Denmark",
+      "team": "Heroic",
+      "instagram": "sjuush_cs",
+      "story": "Rasmus 'sjuush' Beck (born January 3, 1999) is a Danish professional Counter-Strike: Global Offensive player who currently plays for Heroic."
+    },
+    {
+      "id": 72,
+      "nickname": "doto",
+      "fullName": "Joonas Forss",
+      "age": "1996-02-18",
+      "photo": "doto.webp",
+      "country": "Finland",
+      "team": "ENCE",
+      "instagram": "joonas_forss",
+      "story": "Joonas 'doto' Forss (born February 18, 1996) is a Finnish professional Counter-Strike: Global Offensive player who currently plays for ENCE."
+    },
+    {
+      "id": 73,
+      "nickname": "ZOREE",
+      "fullName": "Lasse Uronen",
+      "age": "1993-10-15",
+      "photo": "zoree.webp",
+      "country": "Finland",
+      "team": "HAVU",
+      "instagram": "lassezor",
+      "story": "Lasse 'ZOREE' Uronen (born October 15, 1993) is a Finnish professional Counter-Strike: Global Offensive and former professional Counter-Strike: Source player who currently plays for HAVU Gaming as the AWPer."
+    },
+    {
+      "id": 74,
+      "nickname": "sLowi",
+      "fullName": "Olli Pitkänen",
+      "age": "1996-02-27",
+      "photo": "slowi.webp",
+      "country": "Finland",
+      "team": "HAVU",
+      "instagram": "slowiii",
+      "story": "Olli 'sLowi' Pitkänen is a Finnish professional Counter-Strike: Global Offensive player who currently plays for HAVU Gaming as an in-game leader."
+    },
+    {
+      "id": 75,
+      "nickname": "jemi",
+      "fullName": "Jemi Mäkinen",
+      "age": "2000-01-01",
+      "photo": "jemi.webp",
+      "country": "Finland",
+      "team": "HAVU",
+      "instagram": "",
+      "story": "Jemi 'jemi' Mäkinen is a Finnish professional Counter-Strike: Global Offensive player who currently plays for HAVU Gaming."
     }
-  ],
-  "notScandinavian": []
+  ]
 }
