@@ -13,6 +13,9 @@ const Header = () => (
 					<Link className='header__link' to='/allPlayers'>
 						All Players
 					</Link>
+					<Link className='header__link' to='/admin'>
+						Admin
+					</Link>
 				</nav>
 				<div className='header__date'>20.04.2021</div>
 			</div>
