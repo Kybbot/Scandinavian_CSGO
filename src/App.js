@@ -1,13 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Admin, Home, Player, AllPlayers } from './pages';
-import { Header, Signup, Login, PrivateRoute } from './components';
+import { Header, Signup, Login, PrivateRoute, ScrollToTop } from './components';
 import { AuthProvider } from './context/AuthContext';
 
 const App = () => {
 	return (
 		<div className='App'>
 			<Header />
+			<ScrollToTop />
 			<AuthProvider>
 				<Switch>
 					<Route exact path='/' component={Home} />
