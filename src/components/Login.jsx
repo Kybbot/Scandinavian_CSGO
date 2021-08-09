@@ -36,26 +36,17 @@ const Login = () => {
 				<form className='admin-form admin-form--column' onSubmit={handleSubmit}>
 					<fieldset className='admin-form__fieldset w-100' id='email'>
 						<label className='admin-form__label'>Email</label>
-						<input
-							className='admin-form__input'
-							type='email'
-							ref={emailRef}
-							required
-						/>
+						<input className='admin-form__input' type='email' ref={emailRef} required />
 					</fieldset>
 					<fieldset className='admin-form__fieldset w-100' id='password'>
 						<label className='admin-form__label'>Password</label>
-						<input
-							className='admin-form__input'
-							type='password'
-							ref={passwordRef}
-							required
-						/>
+						<input className='admin-form__input' type='password' ref={passwordRef} required />
 					</fieldset>
 					<button disabled={loading} className='btn w-100' type='submit'>
 						Log In
 					</button>
 				</form>
+				<p>Test account: email - kybbot1@gmail.com password - kybbot1</p>
 				<div className='text-center'>
 					Need an account? <Link to='/admin/signup'>Sign Up</Link>
 				</div>
