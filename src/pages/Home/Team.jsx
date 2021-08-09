@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setTeam, setShowAbout, setMembers } from '../../redux/actions/teams';
+import { setTeam, setShowAbout, setMembers } from '../../redux/reducers/teamsSlice';
 
 const img = 'data/teams-img/';
 

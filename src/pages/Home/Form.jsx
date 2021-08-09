@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { fetchTeams, setShowAbout } from '../../redux/actions/teams';
+import { fetchTeams, setShowAbout } from '../../redux/reducers/teamsSlice';
 
 const countrys = ['Sweden', 'Denmark', 'Finland', 'Mix'];
 
@@ -15,9 +15,9 @@ const Form = () => {
 	};
 
 	const submitHandler = (event) => {
+		event.preventDefault();
 		dispatch(setShowAbout(false));
 		dispatch(fetchTeams(country));
-		event.preventDefault();
 	};
 
 	return (

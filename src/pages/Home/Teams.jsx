@@ -1,19 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { fetchPlayers } from '../../redux/actions/teams';
 import Team from './Team';
 import About from './About';
 
 const Teams = () => {
-	const dispatch = useDispatch();
-	const { items, showAbout, players } = useSelector(({ teams }) => teams);
-
-	React.useEffect(() => {
-		if (!players.length) {
-			dispatch(fetchPlayers());
-		}
-	});
+	const { items, showAbout } = useSelector(({ teams }) => teams);
 
 	return (
 		<div className='teams'>

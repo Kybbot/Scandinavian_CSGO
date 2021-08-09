@@ -2,11 +2,9 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchPlayers, sortCountrys, sortTeams } from '../../redux/actions/allPlayers';
+import { countPlayers, sortTeams, sortCountrys } from '../../redux/reducers/teamsSlice';
 import Sort from './Sort';
 import Statistics from './Statistics';
-
-const img = 'data/players-img/';
 
 const sortItems = [
 	{ name: 'A-Z', value: 'asc' },
@@ -14,13 +12,15 @@ const sortItems = [
 ];
 
 const AllPlayers = () => {
+	const img = 'data/players-img/';
+
 	const dispatch = useDispatch();
 
-	const { items, countedPlayers } = useSelector(({ allPlayers }) => allPlayers);
+	const { players, countedPlayers } = useSelector(({ teams }) => teams);
 
 	React.useEffect(() => {
-		if (!items.length) {
-			dispatch(fetchPlayers());
+		if (!Object.keys(countedPlayers).length) {
+			dispatch(countPlayers());
 		}
 	});
 
@@ -56,8 +56,8 @@ const AllPlayers = () => {
 					<div>Country</div>
 					<div>Team</div>
 				</div>
-				{items.length &&
-					items.map(({ id, photo, nickname, fullName, age, country, team }) => (
+				{players.length &&
+					players.map(({ id, photo, nickname, fullName, age, country, team }) => (
 						<div className='all-players__player' key={id}>
 							<LazyLoad height={40} once offset={20}>
 								<img className='all-players__img' src={img + (photo ? photo : 'blankplayer.svg')} alt={nickname} />

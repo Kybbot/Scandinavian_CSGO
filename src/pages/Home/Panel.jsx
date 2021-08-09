@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { findPlayer } from '../../redux/actions/teams';
+import { setPlayer } from '../../redux/reducers/teamsSlice';
 import { convertDate } from '../../util/converDate';
 
 const Panel = ({ name, members, close }) => {
@@ -42,7 +42,7 @@ const Panel = ({ name, members, close }) => {
 								<img
 									src={img + (member.photo ? member.photo : 'blankplayer.svg')}
 									alt={member.nickname}
-									onClick={() => dispatch(findPlayer(member.nickname))}
+									onClick={() => dispatch(setPlayer(member.nickname))}
 								/>
 							</Link>
 							<div className='member__nickname' title={member.nickname}>
