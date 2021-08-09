@@ -17,7 +17,9 @@ let byField = function (field, reverse, primer) {
 	reverse = !reverse ? 1 : -1;
 
 	return function (a, b) {
-		return (a = key(a)), (b = key(b)), reverse * ((a > b) - (b > a));
+		a = key(a);
+		b = key(b);
+		return reverse * ((a > b) - (b > a));
 	};
 };
 

@@ -19,7 +19,7 @@ const Panel = ({ name, members, close }) => {
 		if (!close) {
 			setHeight(`${content.current.scrollHeight + 20}px`);
 		}
-	}, []);
+	}, [close]);
 
 	const panelBtnHandler = () => {
 		setIsClose(!isclose);
@@ -30,16 +30,11 @@ const Panel = ({ name, members, close }) => {
 		<div className='panel'>
 			<div className='panel__name'>
 				{name}
-				<button
-					onClick={panelBtnHandler}
-					className={'panel__btn ' + (isclose ? '' : 'panel__btn--rotate')}>
+				<button onClick={panelBtnHandler} className={'panel__btn ' + (isclose ? '' : 'panel__btn--rotate')}>
 					^
 				</button>
 			</div>
-			<div
-				ref={content}
-				style={{ maxHeight: `${height}` }}
-				className={'panel__content'}>
+			<div ref={content} style={{ maxHeight: `${height}` }} className={'panel__content'}>
 				{members.length ? (
 					members.map((member) => (
 						<div key={member.nickname} className='member'>

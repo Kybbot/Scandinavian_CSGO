@@ -1,0 +1,29 @@
+.team {
+	width: 145px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--blocks-bg);
+	padding: 10px;
+	border-radius: var(--radius);
+	border: 1px solid var(--blocks-bg);
+	box-shadow: var(--shadow);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.team:hover {
+	border: 1px solid var(--accent-color);
+}
+
+.team img {
+	height: 100px;
+	width: 100px;
+	object-fit: contain;
+}
+
+.team__info {
+	font-size: 14px;
+	margin-top: 5px;
+}

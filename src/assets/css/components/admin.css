@@ -1,0 +1,188 @@
+.admin__btns {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.players-list,
+.teams-list {
+	margin-bottom: var(--gap);
+}
+
+.players-list__info,
+.teams-list__info {
+	position: relative;
+	display: grid;
+	align-items: center;
+	padding: 10px;
+	opacity: 0.5;
+}
+
+.players-list__info {
+	grid-template-columns: repeat(6, 1fr) 35px;
+}
+
+.teams-list__info {
+	grid-template-columns: repeat(5, 1fr) 35px;
+}
+
+.players-list__info::after,
+.teams-list__info::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	display: block;
+	width: 98%;
+	height: 1px;
+	background-color: grey;
+}
+
+.admin-player,
+.admin-team {
+	position: relative;
+}
+
+.admin-player::after,
+.admin-team::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	display: block;
+	width: 98%;
+	height: 1px;
+	background-color: grey;
+}
+
+.admin-player__container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr) 35px;
+	align-items: center;
+	padding: 10px;
+}
+
+.admin-player__img,
+.admin-team__img {
+	height: 40px;
+	width: 40px;
+	object-fit: contain;
+}
+
+.admin-player__nickname,
+.admin-team__name {
+	font-weight: 700;
+}
+
+.admin-player__name {
+	font-weight: 500;
+}
+
+.admin-player__edit,
+.admin-team__edit {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+}
+
+.admin-team__container {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr) 35px;
+	align-items: center;
+	padding: 10px;
+}
+
+.admin-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--gap);
+	padding: 10px;
+}
+
+.admin-form--column {
+	flex-direction: column;
+}
+
+.admin-form__signup,
+.admin-form__login {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: var(--blocks-bg);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
+.admin-form__label {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+.admin-form__fieldset {
+	display: flex;
+	flex-direction: column;
+	border: none;
+	padding: 0;
+}
+
+.admin-form__fieldset--full {
+	flex: 1 1 auto;
+}
+
+.admin-form__fieldset--w25 {
+	width: 25%;
+}
+
+.admin-form__fieldset input {
+	margin-bottom: calc(var(--gap) / 2);
+}
+
+.admin-form__fieldset input:last-child {
+	margin-bottom: 0;
+}
+
+.admin-form__input {
+	background-color: var(--blocks-bg);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	outline: none;
+	padding: 5px;
+	transition: var(--transition);
+}
+
+.admin-form__input:active,
+.admin-form__input:focus {
+	box-shadow: var(--outline);
+}
+
+.admin-form__desc {
+	height: 100px;
+	width: 50%;
+	background-color: var(--blocks-bg);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	outline: none;
+	padding: 5px;
+	resize: vertical;
+	transition: var(--transition);
+}
+
+.admin-form__desc:active,
+.admin-form__desc:focus {
+	box-shadow: var(--outline);
+}
+
+.admin-form__desc--full {
+	width: 100%;
+}
+
+.admin-form__desc--little {
+	width: 25%;
+}

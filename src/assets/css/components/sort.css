@@ -1,0 +1,57 @@
+.sort {
+	position: relative;
+	background-color: var(--blocks-bg);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	padding: 10px;
+}
+
+.sort__label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--gap);
+}
+
+.sort__btn {
+	background: linear-gradient(145deg, #ffffff, #e6e6e6);
+	border: none;
+	border-radius: var(--radius);
+	font-weight: 700;
+	padding: 2px 8px;
+	transform: rotate(180deg);
+	outline: none;
+	cursor: pointer;
+}
+
+.sort__btn--rotate {
+	transform: rotate(0);
+}
+
+.sort_popup {
+	position: absolute;
+	left: 0;
+	top: calc(var(--gap) * 2.5);
+	width: 100%;
+	background-color: var(--blocks-bg);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	z-index: 10;
+}
+
+.sort_popup ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sort_popup ul li {
+	padding: 10px;
+	transition: var(--transition);
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.sort_popup ul li:hover {
+	background-color: var(--bg-color);
+}

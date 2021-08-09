@@ -13,15 +13,13 @@ const Teams = () => {
 		if (!players.length) {
 			dispatch(fetchPlayers());
 		}
-	}, []);
+	});
 
 	return (
 		<div className='teams'>
 			<div className='container'>
 				<div className='teams__row'>
-					{items.length
-						? items.map((team) => <Team key={team.id} team={team} />)
-						: 'Choose the country!'}
+					{items.length ? items.map((team) => <Team key={team.id} team={team} />) : 'Choose the country!'}
 				</div>
 				<div className='row'>{showAbout && <About />}</div>
 			</div>
