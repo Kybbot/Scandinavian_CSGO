@@ -38,7 +38,7 @@ const Panel = ({ name, members, close }) => {
 				{members.length ? (
 					members.map((member) => (
 						<div key={member.nickname} className='member'>
-							<Link to={`/${member.nickname}`}>
+							<Link to={`/player/${member.nickname}`}>
 								<img
 									src={img + (member.photo ? member.photo : 'blankplayer.svg')}
 									alt={member.nickname}

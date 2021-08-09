@@ -16,7 +16,7 @@ const App = () => {
 					<Route path='/admin/signup' component={Signup} />
 					<Route path='/admin/login' component={Login} />
 					<Route path='/allPlayers' component={AllPlayers} />
-					<Route path='/:name' component={Player} />
+					<Route path='/player/:name' component={Player} />
 				</Switch>
 			</AuthProvider>
 		</div>
