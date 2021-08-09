@@ -2,44 +2,34 @@
 	font-family: 'NotoSansJP';
 	font-style: normal;
 	font-weight: 100;
-	src: url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-100.woff2)
-			format('woff2'),
-		url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-100.woff)
-			format('woff');
+	src: url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-100.woff2) format('woff2'),
+		url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-100.woff) format('woff');
 }
 @font-face {
 	font-family: 'NotoSansJP';
 	font-style: normal;
 	font-weight: 300;
-	src: url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-300.woff2)
-			format('woff2'),
-		url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-300.woff)
-			format('woff');
+	src: url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-300.woff2) format('woff2'),
+		url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-300.woff) format('woff');
 }
 @font-face {
 	font-family: 'NotoSansJP';
 	font-style: normal;
 	font-weight: 400;
-	src: url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-regular.woff2)
-			format('woff2'),
-		url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-regular.woff)
-			format('woff');
+	src: url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-regular.woff2) format('woff2'),
+		url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-regular.woff) format('woff');
 }
 @font-face {
 	font-family: 'NotoSansJP';
 	font-style: normal;
 	font-weight: 500;
-	src: url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-500.woff2)
-			format('woff2'),
-		url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-500.woff)
-			format('woff');
+	src: url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-500.woff2) format('woff2'),
+		url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-500.woff) format('woff');
 }
 @font-face {
 	font-family: 'NotoSansJP';
 	font-style: normal;
 	font-weight: 700;
-	src: url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-700.woff2)
-			format('woff2'),
-		url(../assets/fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-700.woff)
-			format('woff');
+	src: url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-700.woff2) format('woff2'),
+		url(../fonts/Noto_Sans_JP/noto-sans-jp-v28-latin-700.woff) format('woff');
 }
