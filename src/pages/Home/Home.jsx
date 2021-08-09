@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, Teams } from '../components';
+import Form from './Form';
+import Teams from './Teams';
 
 const Home = () => {
 	return (

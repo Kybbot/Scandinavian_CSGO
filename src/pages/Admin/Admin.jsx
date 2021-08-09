@@ -1,8 +1,9 @@
 import React from 'react';
-
-import { PlayersList, TeamsList } from '../components';
-import { useAuth } from '../context/AuthContext';
 import { useHistory } from 'react-router-dom';
+
+import { useAuth } from '../../context/AuthContext';
+import TeamsList from './TeamsList';
+import PlayersList from './PlayersList';
 
 const Admin = () => {
 	const [teams, setTeams] = React.useState([]);

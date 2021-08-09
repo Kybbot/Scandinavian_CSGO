@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import { findPlayer } from '../redux/actions/teams';
-import { convertDate } from '../util/converDate';
+import { findPlayer } from '../../redux/actions/teams';
+import { convertDate } from '../../util/converDate';
 
 const Panel = ({ name, members, close }) => {
 	const img = 'data/players-img/';

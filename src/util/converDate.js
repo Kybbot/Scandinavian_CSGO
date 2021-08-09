@@ -1,5 +1,4 @@
 export const convertDate = (date) => {
-	// const month = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 	const month = [
 		'January',
 		'February',
@@ -24,7 +23,5 @@ export const convertDate = (date) => {
 		let age = now.getFullYear() - birthDate.getFullYear();
 		return now.setFullYear(0) < birthDate.setFullYear(0) ? age - 1 : age;
 	}
-	return `${ageDate} ${month[ageMonth]} ${ageYear} (${birthDateToAge(
-		date
-	)} years)`;
+	return `${ageDate} ${month[ageMonth]} ${ageYear} (${birthDateToAge(date)} years)`;
 };

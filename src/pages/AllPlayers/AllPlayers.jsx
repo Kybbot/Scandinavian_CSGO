@@ -2,8 +2,9 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Sort, Statistics } from '../components';
-import { fetchPlayers, sortCountrys, sortTeams } from '../redux/actions/allPlayers';
+import { fetchPlayers, sortCountrys, sortTeams } from '../../redux/actions/allPlayers';
+import Sort from './Sort';
+import Statistics from './Statistics';
 
 const img = 'data/players-img/';
 

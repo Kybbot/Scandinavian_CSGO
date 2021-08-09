@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { convertDate } from '../util/converDate';
-import Instagram from '../util/Instagram';
-import ArrowLeftCircle from '../util/ArrowLeftCircle';
+import { convertDate } from '../../util/converDate';
+import Instagram from '../../assets/icons/Instagram';
+import ArrowLeftCircle from '../../assets/icons/ArrowLeftCircle';
 
 const Player = () => {
 	const { player } = useSelector(({ teams }) => teams);
