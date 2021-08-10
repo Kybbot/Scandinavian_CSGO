@@ -1,7 +1,7 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es6": true
 	},
 	"parser": "babel-eslint",
 	"extends": ["plugin:react/recommended", "airbnb", "prettier"],
@@ -15,6 +15,12 @@
 	"plugins": ["react", "prettier"],
 	"rules": {
 		"prettier/prettier": "error",
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-boolean-value": 0,
+		"func-names": ["error", "never"],
+		"no-param-reassign": "off",
+		"no-restricted-syntax": ["off", "BinaryExpression[operator='in']"],
+		"jsx-a11y/label-has-associated-control": 0,
+		"consistent-return": "off"
 	}
 }

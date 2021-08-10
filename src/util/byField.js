@@ -1,5 +1,5 @@
-export const byField = function (field, reverse, primer) {
-	let key = primer
+const byField = (field, reverse, primer) => {
+	const key = primer
 		? function (x) {
 				return primer(x[field]);
 		  }
@@ -15,3 +15,5 @@ export const byField = function (field, reverse, primer) {
 		return reverse * ((a > b) - (b > a));
 	};
 };
+
+export default byField;

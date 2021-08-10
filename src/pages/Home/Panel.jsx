@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { setPlayer } from '../../redux/reducers/teamsSlice';
-import { convertDate } from '../../util/converDate';
+import convertDate from '../../util/converDate';
 
 const Panel = ({ name, close, members }) => {
 	const img = 'data/players-img/';
@@ -31,11 +31,11 @@ const Panel = ({ name, close, members }) => {
 		<div className='panel'>
 			<div className='panel__name'>
 				{name}
-				<button onClick={panelBtnHandler} className={'panel__btn ' + (isclose ? '' : 'panel__btn--rotate')}>
+				<button type='button' onClick={panelBtnHandler} className={`panel__btn ${isclose ? '' : 'panel__btn--rotate'}`}>
 					^
 				</button>
 			</div>
-			<div ref={content} style={{ maxHeight: `${height}` }} className={'panel__content'}>
+			<div ref={content} style={{ maxHeight: `${height}` }} className='panel__content'>
 				{members.length ? (
 					members.map((member) => (
 						<div key={member.nickname} className='member'>
@@ -64,9 +64,9 @@ const Panel = ({ name, close, members }) => {
 };
 
 Panel.propTypes = {
-	name: PropTypes.string,
-	close: PropTypes.bool,
-	members: PropTypes.arrayOf(PropTypes.object),
+	name: PropTypes.string.isRequired,
+	close: PropTypes.bool.isRequired,
+	members: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Panel;

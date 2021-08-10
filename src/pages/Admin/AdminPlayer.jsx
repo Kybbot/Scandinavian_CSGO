@@ -6,18 +6,19 @@ import Edit from '../../assets/icons/Edit';
 
 const img = 'data/players-img/';
 
-const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instagram, story }) => {
+const AdminPlayer = ({ player }) => {
+	const { id, nickname, fullName, age, photo, country, team, instagram, story } = player;
 	const [edit, setEdit] = React.useState(false);
 	const [form, setForm] = React.useState({
-		id: id,
-		nickname: nickname,
-		fullName: fullName,
-		age: age,
-		photo: photo,
-		country: country,
-		team: team,
-		instagram: instagram,
-		story: story,
+		id,
+		nickname,
+		fullName,
+		age,
+		photo,
+		country,
+		team,
+		instagram,
+		story,
 	});
 
 	const editChange = () => {
@@ -25,8 +26,8 @@ const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instag
 	};
 
 	const handleInputChange = (event) => {
-		const value = event.target.value;
-		const name = event.target.name;
+		const { value } = event.target;
+		const { name } = event.target;
 
 		setForm((state) => ({
 			...state,
@@ -48,14 +49,12 @@ const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instag
 
 	const deleteBtnHandler = (event) => {
 		event.preventDefault();
-		let question = window.confirm('Delete this team?');
+		const question = window.confirm('Delete this team?');
 
 		if (question) {
 			fetch(`/players/${id}`, {
 				method: 'DELETE',
 			});
-		} else {
-			return;
 		}
 	};
 
@@ -63,14 +62,14 @@ const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instag
 		<div className='admin-player'>
 			<div className='admin-player__container'>
 				<LazyLoad height={40} once offset={20}>
-					<img className='admin-player__img' src={img + (photo ? photo : 'blankplayer.svg')} alt={nickname} />
+					<img className='admin-player__img' src={img + (photo || 'blankplayer.svg')} alt={nickname} />
 				</LazyLoad>
 				<div className='admin-player__nickname'>{nickname}</div>
 				<div className='admin-player__name'>{fullName}</div>
 				<div className='admin-player__age'>{age}</div>
 				<div className='admin-player__country'>{country}</div>
 				<div className='admin-player__team'>{team}</div>
-				<button className='admin-player__edit' onClick={editChange}>
+				<button type='button' className='admin-player__edit' onClick={editChange}>
 					<Edit size={18} />
 				</button>
 			</div>
@@ -156,7 +155,7 @@ const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instag
 							name='story'
 							required
 							onChange={handleInputChange}
-						></textarea>
+						/>
 					</fieldset>
 					<button className='btn' type='submit'>
 						Update
@@ -171,15 +170,17 @@ const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instag
 };
 
 AdminPlayer.propTypes = {
-	id: PropTypes.number,
-	nickname: PropTypes.string,
-	fullName: PropTypes.string,
-	age: PropTypes.string,
-	photo: PropTypes.string,
-	country: PropTypes.string,
-	team: PropTypes.string,
-	instagram: PropTypes.string,
-	story: PropTypes.string,
+	player: PropTypes.shape({
+		id: PropTypes.number,
+		nickname: PropTypes.string,
+		fullName: PropTypes.string,
+		age: PropTypes.string,
+		photo: PropTypes.string,
+		country: PropTypes.string,
+		team: PropTypes.string,
+		instagram: PropTypes.string,
+		story: PropTypes.string,
+	}).isRequired,
 };
 
 export default AdminPlayer;

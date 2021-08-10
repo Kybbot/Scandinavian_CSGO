@@ -27,8 +27,8 @@ const AddNewTeam = () => {
 	}, [textarea]);
 
 	const handleInputChange = (event) => {
-		const name = event.target.name;
-		const value = event.target.value;
+		const { name } = event.target;
+		const { value } = event.target;
 
 		setForm((state) => ({
 			...state,
@@ -37,7 +37,7 @@ const AddNewTeam = () => {
 	};
 
 	const handleTextareaChange = (event) => {
-		const name = event.target.name;
+		const { name } = event.target;
 		const value = event.target.value.split(',');
 
 		setTextarea((state) => ({
@@ -61,11 +61,11 @@ const AddNewTeam = () => {
 	return (
 		<form className='admin-form' onSubmit={formHandler}>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label' htmlFor='name'>
+				<label className='admin-form__label' htmlFor='teamName'>
 					Name of Team
 				</label>
 				<input
-					id='name'
+					id='teamName'
 					className='admin-form__input'
 					name='name'
 					type='text'
@@ -75,11 +75,11 @@ const AddNewTeam = () => {
 					required
 					onChange={handleInputChange}
 				/>
-				<label className='admin-form__label' htmlFor='country'>
+				<label className='admin-form__label' htmlFor='teamCountry'>
 					Name of Country
 				</label>
 				<input
-					id='country'
+					id='teamCountry'
 					className='admin-form__input'
 					name='country'
 					type='text'
@@ -91,11 +91,11 @@ const AddNewTeam = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label' htmlFor='based'>
+				<label className='admin-form__label' htmlFor='teamBased'>
 					Year of based
 				</label>
 				<input
-					id='based'
+					id='teamBased'
 					className='admin-form__input'
 					name='based'
 					type='number'
@@ -105,11 +105,11 @@ const AddNewTeam = () => {
 					required
 					onChange={handleInputChange}
 				/>
-				<label className='admin-form__label' htmlFor='webSite'>
+				<label className='admin-form__label' htmlFor='teamWebSite'>
 					Link to webSite
 				</label>
 				<input
-					id='webSite'
+					id='teamWebSite'
 					className='admin-form__input'
 					name='webSite'
 					type='url'
@@ -121,11 +121,11 @@ const AddNewTeam = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label' htmlFor='logo'>
+				<label className='admin-form__label' htmlFor='teamLogo'>
 					Name of logo
 				</label>
 				<input
-					id='logo'
+					id='teamLogo'
 					className='admin-form__input'
 					name='logo'
 					type='text'
@@ -137,32 +137,32 @@ const AddNewTeam = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
-				<label className='admin-form__label' htmlFor='currentMembers'>
+				<label className='admin-form__label' htmlFor='teamCurrentMembers'>
 					Names of current members
 				</label>
 				<textarea
-					id='currentMembers'
+					id='teamCurrentMembers'
 					name='currentMembers'
 					className='admin-form__desc admin-form__desc--full'
 					placeholder='Current Members. Example: hampus,REZ,Plopski,twist,nawwk'
 					value={form.currentMembers}
 					required
 					onChange={handleTextareaChange}
-				></textarea>
+				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
-				<label className='admin-form__label' htmlFor='pastMembers'>
+				<label className='admin-form__label' htmlFor='teamPastMembers'>
 					Names of past members
 				</label>
 				<textarea
-					id='pastMembers'
+					id='teamPastMembers'
 					name='pastMembers'
 					className='admin-form__desc admin-form__desc--full'
 					placeholder='Past Members. Example: hampus,REZ,Plopski,twist,nawwk'
 					value={form.pastMembers}
 					required
 					onChange={handleTextareaChange}
-				></textarea>
+				/>
 			</fieldset>
 			<button className='btn' type='submit'>
 				Add new team

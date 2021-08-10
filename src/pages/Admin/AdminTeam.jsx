@@ -5,23 +5,32 @@ import Edit from '../../assets/icons/Edit';
 
 const img = 'data/teams-img/';
 
-const AdminTeam = ({ id, name, country, based, webSite, logo, members: { currentMembers, pastMembers } }) => {
+const AdminTeam = ({ team }) => {
+	const {
+		id,
+		name,
+		country,
+		based,
+		webSite,
+		logo,
+		members: { currentMembers, pastMembers },
+	} = team;
 	const [edit, setEdit] = React.useState(false);
 	const [form, setForm] = React.useState({
-		id: id,
-		name: name,
-		country: country,
-		based: based,
-		webSite: webSite,
-		logo: logo,
+		id,
+		name,
+		country,
+		based,
+		webSite,
+		logo,
 		members: {
-			currentMembers: currentMembers,
-			pastMembers: pastMembers,
+			currentMembers,
+			pastMembers,
 		},
 	});
 	const [textarea, setTextarea] = React.useState({
-		currentMembers: currentMembers,
-		pastMembers: pastMembers,
+		currentMembers,
+		pastMembers,
 	});
 
 	React.useEffect(() => {
@@ -36,8 +45,9 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 	};
 
 	const handleInputChange = (event) => {
-		const name = event.target.name;
-		const value = event.target.value;
+		// eslint-disable-next-line no-shadow
+		const { name } = event.target;
+		const { value } = event.target;
 
 		setForm((state) => ({
 			...state,
@@ -46,7 +56,8 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 	};
 
 	const handleTextareaChange = (event) => {
-		const name = event.target.name;
+		// eslint-disable-next-line no-shadow
+		const { name } = event.target;
 		const value = event.target.value.split(',');
 
 		setTextarea((state) => ({
@@ -69,14 +80,12 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 
 	const deleteBtnHandler = (event) => {
 		event.preventDefault();
-		let question = window.confirm('Delete this team?');
+		const question = window.confirm('Delete this team?');
 
 		if (question) {
 			fetch(`/teams/${id}`, {
 				method: 'DELETE',
 			});
-		} else {
-			return;
 		}
 	};
 
@@ -88,7 +97,7 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 				<div className='admin-team__country'>{country}</div>
 				<div className='admin-team__based'>{based}</div>
 				<div className='admin-team__webSite'>{webSite}</div>
-				<button className='admin-team__edit' onClick={editChange}>
+				<button type='button' className='admin-team__edit' onClick={editChange}>
 					<Edit size={18} />
 				</button>
 			</div>
@@ -150,7 +159,7 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 							className='admin-form__desc admin-form__desc--full'
 							required
 							onChange={handleTextareaChange}
-						></textarea>
+						/>
 					</fieldset>
 					<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
 						<label className='admin-form__label'>Names of past members</label>
@@ -160,7 +169,7 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 							className='admin-form__desc admin-form__desc--full'
 							required
 							onChange={handleTextareaChange}
-						></textarea>
+						/>
 					</fieldset>
 					<button className='btn' type='submit'>
 						Update
@@ -175,16 +184,18 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 };
 
 AdminTeam.propTypes = {
-	id: PropTypes.number,
-	name: PropTypes.string,
-	country: PropTypes.string,
-	based: PropTypes.number,
-	webSite: PropTypes.string,
-	logo: PropTypes.string,
-	members: PropTypes.shape({
-		currentMembers: PropTypes.arrayOf(PropTypes.string),
-		pastMembers: PropTypes.arrayOf(PropTypes.string),
-	}),
+	team: PropTypes.shape({
+		id: PropTypes.number,
+		name: PropTypes.string,
+		country: PropTypes.string,
+		based: PropTypes.number,
+		webSite: PropTypes.string,
+		logo: PropTypes.string,
+		members: PropTypes.shape({
+			currentMembers: PropTypes.arrayOf(PropTypes.string),
+			pastMembers: PropTypes.arrayOf(PropTypes.string),
+		}),
+	}).isRequired,
 };
 
 export default AdminTeam;

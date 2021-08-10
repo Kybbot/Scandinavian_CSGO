@@ -1,15 +1,14 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { byField } from '../../util/byField';
+import byField from '../../util/byField';
 
 const findPlayers = (state, arr) => arr.map((nickname) => state.players.find((player) => player.nickname === nickname));
 
 const findPlayer = ({ currentMembers, pastMembers }, nickname) => {
-	let player = currentMembers.find((player) => player.nickname === nickname);
+	const player = currentMembers.find((currentMember) => currentMember.nickname === nickname);
 	if (player) {
 		return player;
-	} else {
-		return pastMembers.find((player) => player.nickname === nickname);
 	}
+	return pastMembers.find((pastMember) => pastMember.nickname === nickname);
 };
 
 export const fetchTeams = createAsyncThunk('teams/fetchTeams', async (country) => {
@@ -69,7 +68,7 @@ const teamsSlice = createSlice({
 			state.player = newPlayer;
 		},
 		countPlayers: (state) => {
-			const countedPlayers = state.players.reduce(function (obj, el) {
+			const countedPlayers = state.players.reduce((obj, el) => {
 				obj[el.country] = (obj[el.country] || 0) + 1;
 				return obj;
 			}, {});

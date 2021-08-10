@@ -62,7 +62,7 @@ const AllPlayers = () => {
 					players.map(({ id, photo, nickname, fullName, age, country, team }) => (
 						<div className='all-players__player' key={id}>
 							<LazyLoad height={40} once offset={20}>
-								<img className='all-players__img' src={img + (photo ? photo : 'blankplayer.svg')} alt={nickname} />
+								<img className='all-players__img' src={img + (photo || 'blankplayer.svg')} alt={nickname} />
 							</LazyLoad>
 							<div className='all-players__nickname'>{nickname}</div>
 							<div className='all-players__name'>{fullName}</div>

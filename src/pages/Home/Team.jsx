@@ -10,7 +10,7 @@ const Team = React.memo(({ team }) => {
 	const dispatch = useDispatch();
 
 	const click = (event) => {
-		let teamName = event.target.getAttribute('data-name');
+		const teamName = event.target.getAttribute('data-name');
 		dispatch(setTeam(teamName));
 		dispatch(setMembers());
 		dispatch(setShowAbout(true));
@@ -25,7 +25,7 @@ const Team = React.memo(({ team }) => {
 });
 
 Team.propTypes = {
-	team: PropTypes.object,
+	team: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object])).isRequired,
 };
 
 export default Team;

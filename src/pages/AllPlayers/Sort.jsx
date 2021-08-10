@@ -18,7 +18,11 @@ const Sort = React.memo(({ items, name, onClickSort }) => {
 		<div className='sort'>
 			<div className='sort__label'>
 				{name}
-				<button className={'sort__btn ' + (visiblePopup ? 'sort__btn--rotate' : '')} onClick={toggleVisiblePopup}>
+				<button
+					type='button'
+					className={`sort__btn ${visiblePopup ? 'sort__btn--rotate' : ''}`}
+					onClick={toggleVisiblePopup}
+				>
 					^
 				</button>
 			</div>
@@ -43,9 +47,9 @@ Sort.propTypes = {
 			name: PropTypes.string,
 			value: PropTypes.string,
 		})
-	),
-	name: PropTypes.string,
-	onClickSort: PropTypes.func,
+	).isRequired,
+	name: PropTypes.string.isRequired,
+	onClickSort: PropTypes.func.isRequired,
 };
 
 export default Sort;

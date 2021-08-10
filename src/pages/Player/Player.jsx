@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { getPlayer } from '../../redux/selectors';
-import { convertDate } from '../../util/converDate';
+import convertDate from '../../util/converDate';
 import Instagram from '../../assets/icons/Instagram';
 import ArrowLeftCircle from '../../assets/icons/ArrowLeftCircle';
 
@@ -27,7 +27,7 @@ const Player = () => {
 								src={img + (player.photo ? player.photo : 'blankplayer.svg')}
 								alt={player.nickname}
 							/>
-							<img className='player__flag' src={flag + player.country + '.png'} alt={player.country} />
+							<img className='player__flag' src={`${flag}${player.country}.png`} alt={player.country} />
 						</div>
 						<h2 className='player__nickname'>{player.nickname}</h2>
 						<h3 className='player__fullname'>{player.fullName}</h3>

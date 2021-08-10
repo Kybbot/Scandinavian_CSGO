@@ -1,4 +1,4 @@
-export const convertDate = (date) => {
+const convertDate = (date) => {
 	const month = [
 		'January',
 		'February',
@@ -13,15 +13,21 @@ export const convertDate = (date) => {
 		'November',
 		'December',
 	];
-	let age = new Date(date);
-	let ageYear = age.getFullYear();
-	let ageMonth = age.getMonth();
-	let ageDate = age.getDate();
+
+	const age = new Date(date);
+	const ageYear = age.getFullYear();
+	const ageMonth = age.getMonth();
+	const ageDate = age.getDate();
+
 	function birthDateToAge(birthDate) {
 		birthDate = new Date(birthDate);
-		let now = new Date();
-		let age = now.getFullYear() - birthDate.getFullYear();
-		return now.setFullYear(0) < birthDate.setFullYear(0) ? age - 1 : age;
+		const now = new Date();
+		const currentAge = now.getFullYear() - birthDate.getFullYear();
+
+		return now.setFullYear(0) < birthDate.setFullYear(0) ? currentAge - 1 : currentAge;
 	}
+
 	return `${ageDate} ${month[ageMonth]} ${ageYear} (${birthDateToAge(date)} years)`;
 };
+
+export default convertDate;

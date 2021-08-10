@@ -15,8 +15,8 @@ const AddNewPlayer = () => {
 	});
 
 	const handleInputChange = (event) => {
-		const value = event.target.value;
-		const name = event.target.name;
+		const { value } = event.target;
+		const { name } = event.target;
 
 		setForm((state) => ({
 			...state,
@@ -39,8 +39,11 @@ const AddNewPlayer = () => {
 	return (
 		<form onSubmit={formHandler} className='admin-form'>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label'>Player nickname</label>
+				<label htmlFor='playerNickname' className='admin-form__label'>
+					Player nickname
+				</label>
 				<input
+					id='playerNickname'
 					className='admin-form__input'
 					value={form.nickname}
 					name='nickname'
@@ -50,8 +53,11 @@ const AddNewPlayer = () => {
 					required
 					onChange={handleInputChange}
 				/>
-				<label className='admin-form__label'>Player name</label>
+				<label htmlFor='playerName' className='admin-form__label'>
+					Player name
+				</label>
 				<input
+					id='playerName'
 					className='admin-form__input'
 					value={form.fullName}
 					name='fullName'
@@ -63,8 +69,11 @@ const AddNewPlayer = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label'>Player age</label>
+				<label htmlFor='playerAge' className='admin-form__label'>
+					Player age
+				</label>
 				<input
+					id='playerAge'
 					className='admin-form__input'
 					value={form.age}
 					name='age'
@@ -74,8 +83,11 @@ const AddNewPlayer = () => {
 					required
 					onChange={handleInputChange}
 				/>
-				<label className='admin-form__label'>Player country</label>
+				<label htmlFor='playerCountry' className='admin-form__label'>
+					Player country
+				</label>
 				<input
+					id='playerCountry'
 					className='admin-form__input'
 					value={form.country}
 					name='country'
@@ -87,8 +99,11 @@ const AddNewPlayer = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label'>Player team</label>
+				<label htmlFor='playerTeam' className='admin-form__label'>
+					Player team
+				</label>
 				<input
+					id='playerTeam'
 					className='admin-form__input'
 					value={form.team}
 					name='team'
@@ -98,8 +113,11 @@ const AddNewPlayer = () => {
 					required
 					onChange={handleInputChange}
 				/>
-				<label className='admin-form__label'>Player instagram</label>
+				<label htmlFor='playerInst' className='admin-form__label'>
+					Player instagram
+				</label>
 				<input
+					id='playerInst'
 					className='admin-form__input'
 					value={form.instagram}
 					name='instagram'
@@ -110,8 +128,11 @@ const AddNewPlayer = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset'>
-				<label className='admin-form__label'>Player photo name</label>
+				<label htmlFor='playerPhoto' className='admin-form__label'>
+					Player photo name
+				</label>
 				<input
+					id='playerPhoto'
 					className='admin-form__input'
 					value={form.photo}
 					name='photo'
@@ -122,15 +143,18 @@ const AddNewPlayer = () => {
 				/>
 			</fieldset>
 			<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
-				<label className='admin-form__label'>Player story</label>
+				<label htmlFor='playerStory' className='admin-form__label'>
+					Player story
+				</label>
 				<textarea
+					id='playerStory'
 					className='admin-form__desc admin-form__desc--full'
 					value={form.story}
 					name='story'
 					placeholder='Player story...'
 					required
 					onChange={handleInputChange}
-				></textarea>
+				/>
 			</fieldset>
 			<button className='btn' type='submit'>
 				Add new player

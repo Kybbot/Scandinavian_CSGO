@@ -52,13 +52,13 @@ const Admin = () => {
 		<div className='admin'>
 			<div className='container'>
 				<div className='admin__btns'>
-					<button className='btn' onClick={teamsBtnHandler}>
+					<button type='button' className='btn' onClick={teamsBtnHandler}>
 						Teams
 					</button>
-					<button className='btn' onClick={playersBtnHandler}>
+					<button type='button' className='btn' onClick={playersBtnHandler}>
 						Players
 					</button>
-					<button className='btn' onClick={handleLogout}>
+					<button type='button' className='btn' onClick={handleLogout}>
 						Log Out
 					</button>
 				</div>
