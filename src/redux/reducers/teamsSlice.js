@@ -31,8 +31,8 @@ const teamsSlice = createSlice({
 	initialState: {
 		items: [],
 
-		members: {},
 		team: '',
+		members: {},
 		showAbout: false,
 
 		players: [],

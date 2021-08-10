@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+import { getPlayer } from '../../redux/selectors';
 import { convertDate } from '../../util/converDate';
 import Instagram from '../../assets/icons/Instagram';
 import ArrowLeftCircle from '../../assets/icons/ArrowLeftCircle';
 
 const Player = () => {
-	const { player } = useSelector(({ teams }) => teams);
+	const player = useSelector(getPlayer);
 
 	const img = '../data/players-img/';
 	const flag = '../data/countrys/';

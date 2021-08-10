@@ -1,10 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import { getMembers } from '../../redux/selectors';
+
 import Panel from './Panel';
 
 const About = () => {
-	const { members } = useSelector(({ teams }) => teams);
+	const members = useSelector(getMembers);
 
 	return (
 		<div className='about w-100'>

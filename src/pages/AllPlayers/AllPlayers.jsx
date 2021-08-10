@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { countPlayers, sortTeams, sortCountrys } from '../../redux/reducers/teamsSlice';
+import { getPlayers, getCountedPlayers } from '../../redux/selectors';
 import Sort from './Sort';
 import Statistics from './Statistics';
 
@@ -16,7 +17,8 @@ const AllPlayers = () => {
 
 	const dispatch = useDispatch();
 
-	const { players, countedPlayers } = useSelector(({ teams }) => teams);
+	const players = useSelector(getPlayers);
+	const countedPlayers = useSelector(getCountedPlayers);
 
 	React.useEffect(() => {
 		if (!Object.keys(countedPlayers).length) {

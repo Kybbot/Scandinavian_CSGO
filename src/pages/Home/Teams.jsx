@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import { getItems, getShowAbout } from '../../redux/selectors';
 import Team from './Team';
 import About from './About';
 
 const Teams = () => {
-	const { items, showAbout } = useSelector(({ teams }) => teams);
+	const items = useSelector(getItems);
+	const showAbout = useSelector(getShowAbout);
 
 	return (
 		<div className='teams'>
