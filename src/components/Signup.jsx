@@ -23,13 +23,11 @@ const Signup = () => {
 		try {
 			setError('');
 			setLoading(true);
-			await signup(emailRef.current.value, passwordRef.current.value).then(
-				(crud) => {
-					crud.user.sendEmailVerification().then(() => {
-						alert('Check your Email for verification');
-					});
-				}
-			);
+			await signup(emailRef.current.value, passwordRef.current.value).then((crud) => {
+				crud.user.sendEmailVerification().then(() => {
+					alert('Check your Email for verification');
+				});
+			});
 			setLoading(false);
 			history.push('/admin/login');
 		} catch {
@@ -46,32 +44,15 @@ const Signup = () => {
 				<form className='admin-form admin-form--column' onSubmit={handleSubmit}>
 					<fieldset className='admin-form__fieldset w-100' id='email'>
 						<label className='admin-form__label'>Email</label>
-						<input
-							className='admin-form__input'
-							type='email'
-							ref={emailRef}
-							required
-						/>
+						<input className='admin-form__input' type='email' ref={emailRef} required />
 					</fieldset>
 					<fieldset className='admin-form__fieldset w-100' id='password'>
 						<label className='admin-form__label'>Password</label>
-						<input
-							className='admin-form__input'
-							type='password'
-							ref={passwordRef}
-							required
-						/>
+						<input className='admin-form__input' type='password' ref={passwordRef} required />
 					</fieldset>
-					<fieldset
-						className='admin-form__fieldset w-100'
-						id='password-confirm'>
+					<fieldset className='admin-form__fieldset w-100' id='password-confirm'>
 						<label className='admin-form__label'>Password</label>
-						<input
-							className='admin-form__input'
-							type='password'
-							ref={passwordConfirmRef}
-							required
-						/>
+						<input className='admin-form__input' type='password' ref={passwordConfirmRef} required />
 					</fieldset>
 					<button disabled={loading} className='btn w-100' type='submit'>
 						Sign Up
