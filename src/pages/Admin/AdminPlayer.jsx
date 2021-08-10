@@ -1,5 +1,6 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
+import PropTypes from 'prop-types';
 
 import Edit from '../../assets/icons/Edit';
 
@@ -167,6 +168,18 @@ const AdminPlayer = ({ id, nickname, fullName, age, photo, country, team, instag
 			)}
 		</div>
 	);
+};
+
+AdminPlayer.propTypes = {
+	id: PropTypes.number,
+	nickname: PropTypes.string,
+	fullName: PropTypes.string,
+	age: PropTypes.string,
+	photo: PropTypes.string,
+	country: PropTypes.string,
+	team: PropTypes.string,
+	instagram: PropTypes.string,
+	story: PropTypes.string,
 };
 
 export default AdminPlayer;

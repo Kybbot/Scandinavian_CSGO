@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import AddNewTeam from './AddNewTeam';
 import AdminTeam from './AdminTeam';
@@ -20,6 +21,10 @@ const TeamsList = ({ data }) => {
 			))}
 		</div>
 	);
+};
+
+TeamsList.propTypes = {
+	data: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default TeamsList;

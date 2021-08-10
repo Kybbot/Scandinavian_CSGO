@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Edit from '../../assets/icons/Edit';
 
@@ -171,6 +172,19 @@ const AdminTeam = ({ id, name, country, based, webSite, logo, members: { current
 			)}
 		</div>
 	);
+};
+
+AdminTeam.propTypes = {
+	id: PropTypes.number,
+	name: PropTypes.string,
+	country: PropTypes.string,
+	based: PropTypes.number,
+	webSite: PropTypes.string,
+	logo: PropTypes.string,
+	members: PropTypes.shape({
+		currentMembers: PropTypes.arrayOf(PropTypes.string),
+		pastMembers: PropTypes.arrayOf(PropTypes.string),
+	}),
 };
 
 export default AdminTeam;

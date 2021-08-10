@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Statistics = React.memo(({ items }) => {
 	const flag = 'data/countrys/';
@@ -17,5 +18,9 @@ const Statistics = React.memo(({ items }) => {
 	}
 	return <div className='statistics'>{statistics}</div>;
 });
+
+Statistics.propTypes = {
+	items: PropTypes.objectOf(PropTypes.number),
+};
 
 export default Statistics;

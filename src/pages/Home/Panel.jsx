@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { setPlayer } from '../../redux/reducers/teamsSlice';
 import { convertDate } from '../../util/converDate';
 
-const Panel = ({ name, members, close }) => {
+const Panel = ({ name, close, members }) => {
 	const img = 'data/players-img/';
 
 	const dispatch = useDispatch();
@@ -60,6 +61,12 @@ const Panel = ({ name, members, close }) => {
 			</div>
 		</div>
 	);
+};
+
+Panel.propTypes = {
+	name: PropTypes.string,
+	close: PropTypes.bool,
+	members: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Panel;

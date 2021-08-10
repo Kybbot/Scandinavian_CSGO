@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import AddNewPlayer from './AddNewPlayer';
 import AdminPlayer from './AdminPlayer';
@@ -21,6 +22,10 @@ const PlayersList = ({ data }) => {
 			))}
 		</div>
 	);
+};
+
+PlayersList.propTypes = {
+	data: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default PlayersList;

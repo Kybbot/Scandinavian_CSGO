@@ -1,5 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { setTeam, setShowAbout, setMembers } from '../../redux/reducers/teamsSlice';
 
 const img = 'data/teams-img/';
@@ -21,5 +23,9 @@ const Team = React.memo(({ team }) => {
 		</div>
 	);
 });
+
+Team.propTypes = {
+	team: PropTypes.object,
+};
 
 export default Team;

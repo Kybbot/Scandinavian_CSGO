@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Sort = React.memo(({ items, name, onClickSort }) => {
 	const [visiblePopup, setVisiblePopup] = React.useState(false);
@@ -35,5 +36,16 @@ const Sort = React.memo(({ items, name, onClickSort }) => {
 		</div>
 	);
 });
+
+Sort.propTypes = {
+	items: PropTypes.arrayOf(
+		PropTypes.shape({
+			name: PropTypes.string,
+			value: PropTypes.string,
+		})
+	),
+	name: PropTypes.string,
+	onClickSort: PropTypes.func,
+};
 
 export default Sort;
