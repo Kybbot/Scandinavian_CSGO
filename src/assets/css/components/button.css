@@ -15,6 +15,10 @@
 	margin-right: 0;
 }
 
+.btn:focus {
+	box-shadow: var(--outline);
+}
+
 .btn:hover {
 	box-shadow: 1px 1px 3px #d2d2d2, -1px -1px 3px #ffffff;
 }

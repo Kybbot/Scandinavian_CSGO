@@ -25,6 +25,10 @@
 	cursor: pointer;
 }
 
+.panel__btn:focus {
+	box-shadow: var(--outline);
+}
+
 .panel__btn--rotate {
 	transform: rotate(0);
 }

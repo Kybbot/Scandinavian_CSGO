@@ -21,6 +21,12 @@
 		"no-param-reassign": "off",
 		"no-restricted-syntax": ["off", "BinaryExpression[operator='in']"],
 		"jsx-a11y/label-has-associated-control": 0,
-		"consistent-return": "off"
+		"consistent-return": "off",
+		"react/jsx-props-no-spreading": [
+			"error",
+			{
+				"exceptions": ["PrivateRoute", "Route", "Component"]
+			}
+		]
 	}
 }

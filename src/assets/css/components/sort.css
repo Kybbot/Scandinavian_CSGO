@@ -24,6 +24,10 @@
 	cursor: pointer;
 }
 
+.sort__btn:focus {
+	box-shadow: var(--outline);
+}
+
 .sort__btn--rotate {
 	transform: rotate(0);
 }
@@ -48,8 +52,14 @@
 .sort_popup ul li {
 	padding: 10px;
 	transition: var(--transition);
+	border-radius: var(--radius);
 	letter-spacing: 2px;
 	cursor: pointer;
+	outline: none;
+}
+
+.sort_popup ul li:focus {
+	box-shadow: var(--outline);
 }
 
 .sort_popup ul li:hover {

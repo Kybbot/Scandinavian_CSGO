@@ -16,8 +16,17 @@ const Team = React.memo(({ team }) => {
 		dispatch(setShowAbout(true));
 	};
 
+	const keyDown = (event) => {
+		if (event.key === 'Enter') {
+			const teamName = event.target.getAttribute('data-name');
+			dispatch(setTeam(teamName));
+			dispatch(setMembers());
+			dispatch(setShowAbout(true));
+		}
+	};
+
 	return (
-		<div className='team' data-name={team.name} onClick={click}>
+		<div className='team' data-name={team.name} onClick={click} onKeyDown={keyDown} role='button' tabIndex={0}>
 			<img src={img + team.logo} alt={team.name} data-name={team.name} />
 			<div className='team__info' data-name={team.name}>{`${team.name} - ${team.based}`}</div>
 		</div>

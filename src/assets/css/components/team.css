@@ -10,7 +10,12 @@
 	border: 1px solid var(--blocks-bg);
 	box-shadow: var(--shadow);
 	cursor: pointer;
+	outline: none;
 	transition: var(--transition);
+}
+
+.team:focus {
+	box-shadow: var(--outline);
 }
 
 .team:hover {

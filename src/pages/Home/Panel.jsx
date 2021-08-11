@@ -27,6 +27,10 @@ const Panel = ({ name, close, members }) => {
 		setHeight(isclose ? `${content.current.scrollHeight}px` : '0px');
 	};
 
+	const imgClickHandler = (member) => {
+		dispatch(setPlayer(member.nickname));
+	};
+
 	return (
 		<div className='panel'>
 			<div className='panel__name'>
@@ -43,7 +47,7 @@ const Panel = ({ name, close, members }) => {
 								<img
 									src={img + (member.photo ? member.photo : 'blankplayer.svg')}
 									alt={member.nickname}
-									onClick={() => dispatch(setPlayer(member.nickname))}
+									onClick={() => imgClickHandler(member)}
 								/>
 							</Link>
 							<div className='member__nickname' title={member.nickname}>
