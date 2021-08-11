@@ -15,8 +15,7 @@ const AddNewPlayer = () => {
 	});
 
 	const handleInputChange = (event) => {
-		const { value } = event.target;
-		const { name } = event.target;
+		const { value, name } = event.target;
 
 		setForm((state) => ({
 			...state,

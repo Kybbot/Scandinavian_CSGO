@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { Admin, Home, Player, AllPlayers } from './pages';
 import { Header, Signup, Login, PrivateRoute, ScrollToTop } from './components';
-import { AuthProvider } from './context/AuthContext';
+import AuthProvider from './context/AuthContext';
 import { fetchPlayers } from './redux/reducers/teamsSlice';
 
 const App = () => {

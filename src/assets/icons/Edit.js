@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Edit = ({ size = 24, color = '#000000' }) => (
+const Edit = ({ size = '24', color = '#000000' }) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		width={size}

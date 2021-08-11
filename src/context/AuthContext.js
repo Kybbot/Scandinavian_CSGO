@@ -1,11 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { auth } from '../firebase';
 
 const AuthContext = React.createContext();
 
 export const useAuth = () => React.useContext(AuthContext);
 
-export const AuthProvider = ({ children }) => {
+function AuthProvider({ children }) {
 	const [currentUser, setCurrentUser] = React.useState();
 	const [loading, setLoading] = React.useState(true);
 
@@ -32,4 +34,10 @@ export const AuthProvider = ({ children }) => {
 	};
 
 	return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
+}
+
+AuthProvider.propTypes = {
+	children: PropTypes.element.isRequired,
 };
+
+export default AuthProvider;

@@ -98,7 +98,7 @@ const AdminTeam = ({ team }) => {
 				<div className='admin-team__based'>{based}</div>
 				<div className='admin-team__webSite'>{webSite}</div>
 				<button type='button' className='admin-team__edit' onClick={editChange}>
-					<Edit size={18} />
+					<Edit size='18' />
 				</button>
 			</div>
 			{edit && (

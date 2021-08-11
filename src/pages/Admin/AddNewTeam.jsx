@@ -27,8 +27,7 @@ const AddNewTeam = () => {
 	}, [textarea]);
 
 	const handleInputChange = (event) => {
-		const { name } = event.target;
-		const { value } = event.target;
+		const { name, value } = event.target;
 
 		setForm((state) => ({
 			...state,

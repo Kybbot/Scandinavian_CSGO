@@ -35,19 +35,18 @@ const Sort = React.memo(({ items, name, onClickSort }) => {
 			</div>
 			{visiblePopup && (
 				<div className='sort_popup'>
-					<ul>
-						{items.map((item) => (
-							<li
-								key={item.name}
-								onClick={() => onSelectItem(item.value)}
-								onKeyDown={(event) => keyDown(event, item.value)}
-								role='button'
-								tabIndex={0}
-							>
-								{item.name}
-							</li>
-						))}
-					</ul>
+					{items.map((item) => (
+						<div
+							className='sort_popup__item'
+							key={item.name}
+							onClick={() => onSelectItem(item.value)}
+							onKeyDown={(event) => keyDown(event, item.value)}
+							role='button'
+							tabIndex={0}
+						>
+							{item.name}
+						</div>
+					))}
 				</div>
 			)}
 		</div>

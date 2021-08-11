@@ -43,12 +43,8 @@ const Panel = ({ name, close, members }) => {
 				{members.length ? (
 					members.map((member) => (
 						<div key={member.nickname} className='member'>
-							<Link to={`/player/${member.nickname}`}>
-								<img
-									src={img + (member.photo ? member.photo : 'blankplayer.svg')}
-									alt={member.nickname}
-									onClick={() => imgClickHandler(member)}
-								/>
+							<Link to={`/player/${member.nickname}`} onClick={() => imgClickHandler(member)}>
+								<img src={img + (member.photo ? member.photo : 'blankplayer.svg')} alt={member.nickname} />
 							</Link>
 							<div className='member__nickname' title={member.nickname}>
 								{member.nickname}

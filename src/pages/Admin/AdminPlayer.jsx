@@ -70,7 +70,7 @@ const AdminPlayer = ({ player }) => {
 				<div className='admin-player__country'>{country}</div>
 				<div className='admin-player__team'>{team}</div>
 				<button type='button' className='admin-player__edit' onClick={editChange}>
-					<Edit size={18} />
+					<Edit size='18' />
 				</button>
 			</div>
 			{edit && (
