@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 const Signup = () => {
 	const { signup } = useAuth();
@@ -59,7 +59,7 @@ const Signup = () => {
 					</button>
 				</form>
 				<div className='text-center'>
-					Already have an account? <Link to='/admin/login'>Log in</Link>
+					Already have an account? <Link to='/login'>Log in</Link>
 				</div>
 			</div>
 		</div>

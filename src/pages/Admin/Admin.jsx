@@ -45,7 +45,7 @@ const Admin = () => {
 
 	const handleLogout = () => {
 		logout();
-		history.push('/admin/login');
+		history.push('/login');
 	};
 
 	return (

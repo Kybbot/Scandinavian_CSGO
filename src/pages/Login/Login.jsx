@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 const Login = () => {
 	const { login } = useAuth();
@@ -17,7 +17,6 @@ const Login = () => {
 		event.preventDefault();
 
 		try {
-			setError('');
 			setLoading(true);
 			await login(emailRef.current.value, passwordRef.current.value);
 			setLoading(false);
@@ -48,7 +47,7 @@ const Login = () => {
 				</form>
 				<p>Test account: email - kybbot1@gmail.com password - kybbot1</p>
 				<div className='text-center'>
-					Need an account? <Link to='/admin/signup'>Sign Up</Link>
+					Need an account? <Link to='/signup'>Sign Up</Link>
 				</div>
 			</div>
 		</div>
