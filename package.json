@@ -24,11 +24,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"lint": "eslint ./src --format stylish --color",
-		"lint:fix": "eslint ./src --fix",
 		"server": "node server.js",
-		"json-server": "json-server --watch public/db.json --port=3001",
-		"prepare": "husky install"
+		"json-server": "json-server --watch public/db.json --port=3001"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -45,21 +42,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"eslint": "^6.6.0",
-		"eslint-config-airbnb": "^18.2.1",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-import": "^2.24.0",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-prettier": "^3.4.0",
-		"eslint-plugin-react": "^7.24.0",
-		"eslint-plugin-react-hooks": "^4.2.0",
-		"husky": "^7.0.1",
-		"lint-staged": "^11.1.2",
-		"prettier": "^2.3.2"
-	},
-	"lint-staged": {
-		"*.{js,jsx}": "eslint --format stylish --color"
 	}
 }
