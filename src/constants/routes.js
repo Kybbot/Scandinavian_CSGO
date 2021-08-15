@@ -1,4 +1,4 @@
-const routes = {
+export const routesConstants = {
 	home: '/',
 	allPlayers: '/allPlayers',
 	player: '/player/:name',
@@ -7,5 +7,3 @@ const routes = {
 	admin: '/admin',
 	redirect: '/',
 };
-
-export default routes;

@@ -4,23 +4,23 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Home, AllPlayers, Player, Admin, Login, Signup } from '../pages';
 import { Header } from '../components';
 import { PrivateRoute, ScrollToTop } from './components';
-import routesPath from './routesConstants';
+import { routesConstants } from '../constants';
 
 const Routes = () => (
 	<BrowserRouter>
 		<Header />
 		<ScrollToTop />
 		<Switch>
-			<Route exact path={routesPath.home} component={Home} />
-			<Route path={routesPath.allPlayers} component={AllPlayers} />
-			<Route path={routesPath.player} component={Player} />
+			<Route exact path={routesConstants.home} component={Home} />
+			<Route path={routesConstants.allPlayers} component={AllPlayers} />
+			<Route path={routesConstants.player} component={Player} />
 
-			<Route path={routesPath.login} component={Login} />
-			<Route path={routesPath.signup} component={Signup} />
+			<Route path={routesConstants.login} component={Login} />
+			<Route path={routesConstants.signup} component={Signup} />
 
-			<PrivateRoute path={routesPath.admin} component={Admin} />
+			<PrivateRoute path={routesConstants.admin} component={Admin} />
 
-			<Redirect to={routesPath.redirect} />
+			<Redirect to={routesConstants.redirect} />
 		</Switch>
 	</BrowserRouter>
 );
