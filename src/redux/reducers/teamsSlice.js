@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { apiConstants } from '../../constants';
 import byField from '../../util/byField';
 
 const findPlayers = (state, arr) => arr.map((nickname) => state.players.find((player) => player.nickname === nickname));
@@ -12,14 +13,14 @@ const findPlayer = ({ currentMembers, pastMembers }, nickname) => {
 };
 
 export const fetchTeams = createAsyncThunk('teams/fetchTeams', async (country) => {
-	const response = await fetch(`/teams?country=${country}`);
+	const response = await fetch(`${apiConstants.url}/teams?country=${country}`);
 	const data = await response.json();
 
 	return data;
 });
 
 export const fetchPlayers = createAsyncThunk('teams/fetchPlayers', async () => {
-	const response = await fetch(`/players?_sort=team&_order=asc`);
+	const response = await fetch(`${apiConstants.url}/players?_sort=team&_order=asc`);
 	const data = await response.json();
 
 	return data;

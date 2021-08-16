@@ -1,0 +1,23 @@
+.rotate-btn {
+	font-weight: bold;
+	padding: 2px 8px;
+	border: none;
+	border-radius: var(--radius);
+	background: linear-gradient(145deg, #ffffff, #e6e6e6);
+	cursor: pointer;
+	outline: none;
+	transform: rotate(180deg);
+	transition: box-shadow 0.3s ease;
+}
+
+.rotate-btn:focus {
+	box-shadow: var(--outline);
+}
+
+.rotate-btn:hover {
+	box-shadow: 1px 1px 3px #d2d2d2, -1px -1px 3px #ffffff;
+}
+
+.rotate-btn--rotate {
+	transform: rotate(0);
+}

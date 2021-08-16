@@ -1,6 +1,8 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+import { Button } from '../../components';
+
 const AddNewTeam = () => {
 	const [form, setForm] = React.useState({
 		id: uuidv4(),
@@ -62,110 +64,102 @@ const AddNewTeam = () => {
 			<fieldset className='admin-form__fieldset'>
 				<label className='admin-form__label' htmlFor='teamName'>
 					Name of Team
+					<input
+						id='teamName'
+						className='admin-form__input'
+						name='name'
+						type='text'
+						placeholder='Name'
+						value={form.name}
+						pattern="[A-Z][A-Za-z' -_]+"
+						required
+						onChange={handleInputChange}
+					/>
 				</label>
-				<input
-					id='teamName'
-					className='admin-form__input'
-					name='name'
-					type='text'
-					placeholder='Name'
-					value={form.name}
-					pattern="[A-Z][A-Za-z' -_]+"
-					required
-					onChange={handleInputChange}
-				/>
 				<label className='admin-form__label' htmlFor='teamCountry'>
 					Name of Country
+					<input
+						id='teamCountry'
+						className='admin-form__input'
+						name='country'
+						type='text'
+						placeholder='Country'
+						value={form.country}
+						pattern="[A-Z][A-Za-z' -_]+"
+						required
+						onChange={handleInputChange}
+					/>
 				</label>
-				<input
-					id='teamCountry'
-					className='admin-form__input'
-					name='country'
-					type='text'
-					placeholder='Country'
-					value={form.country}
-					pattern="[A-Z][A-Za-z' -_]+"
-					required
-					onChange={handleInputChange}
-				/>
-			</fieldset>
-			<fieldset className='admin-form__fieldset'>
 				<label className='admin-form__label' htmlFor='teamBased'>
 					Year of based
+					<input
+						id='teamBased'
+						className='admin-form__input'
+						name='based'
+						type='number'
+						placeholder='Based'
+						value={form.based}
+						pattern='\d+'
+						required
+						onChange={handleInputChange}
+					/>
 				</label>
-				<input
-					id='teamBased'
-					className='admin-form__input'
-					name='based'
-					type='number'
-					placeholder='Based'
-					value={form.based}
-					pattern='\d+'
-					required
-					onChange={handleInputChange}
-				/>
 				<label className='admin-form__label' htmlFor='teamWebSite'>
 					Link to webSite
+					<input
+						id='teamWebSite'
+						className='admin-form__input'
+						name='webSite'
+						type='url'
+						placeholder='WebSite'
+						value={form.webSite}
+						pattern='^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
+						required
+						onChange={handleInputChange}
+					/>
 				</label>
-				<input
-					id='teamWebSite'
-					className='admin-form__input'
-					name='webSite'
-					type='url'
-					placeholder='WebSite'
-					value={form.webSite}
-					pattern='^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
-					required
-					onChange={handleInputChange}
-				/>
-			</fieldset>
-			<fieldset className='admin-form__fieldset'>
 				<label className='admin-form__label' htmlFor='teamLogo'>
 					Name of logo
+					<input
+						id='teamLogo'
+						className='admin-form__input'
+						name='logo'
+						type='text'
+						placeholder='team.png'
+						value={form.logo}
+						pattern='.*\.(jpe?g|png)$'
+						required
+						onChange={handleInputChange}
+					/>
 				</label>
-				<input
-					id='teamLogo'
-					className='admin-form__input'
-					name='logo'
-					type='text'
-					placeholder='team.png'
-					value={form.logo}
-					pattern='.*\.(jpe?g|png)$'
-					required
-					onChange={handleInputChange}
-				/>
 			</fieldset>
-			<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
+			<fieldset className='admin-form__fieldset'>
 				<label className='admin-form__label' htmlFor='teamCurrentMembers'>
 					Names of current members
+					<textarea
+						id='teamCurrentMembers'
+						name='currentMembers'
+						className='admin-form__desc admin-form__desc--full'
+						placeholder='Current Members. Example: hampus,REZ,Plopski,twist,nawwk'
+						value={form.currentMembers}
+						required
+						onChange={handleTextareaChange}
+					/>
 				</label>
-				<textarea
-					id='teamCurrentMembers'
-					name='currentMembers'
-					className='admin-form__desc admin-form__desc--full'
-					placeholder='Current Members. Example: hampus,REZ,Plopski,twist,nawwk'
-					value={form.currentMembers}
-					required
-					onChange={handleTextareaChange}
-				/>
-			</fieldset>
-			<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
 				<label className='admin-form__label' htmlFor='teamPastMembers'>
 					Names of past members
+					<textarea
+						id='teamPastMembers'
+						name='pastMembers'
+						className='admin-form__desc'
+						placeholder='Past Members. Example: hampus,REZ,Plopski,twist,nawwk'
+						value={form.pastMembers}
+						required
+						onChange={handleTextareaChange}
+					/>
 				</label>
-				<textarea
-					id='teamPastMembers'
-					name='pastMembers'
-					className='admin-form__desc admin-form__desc--full'
-					placeholder='Past Members. Example: hampus,REZ,Plopski,twist,nawwk'
-					value={form.pastMembers}
-					required
-					onChange={handleTextareaChange}
-				/>
 			</fieldset>
-			<button className='btn' type='submit'>
-				Add new team
-			</button>
+			<Button type='submit'>Add new team</Button>
 		</form>
 	);
 };

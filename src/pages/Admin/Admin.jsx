@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { useAuth } from '../../context/AuthContext';
+import Button from '../../components/Button';
 import TeamsList from './TeamsList';
 import PlayersList from './PlayersList';
 
@@ -52,15 +53,15 @@ const Admin = () => {
 		<div className='admin'>
 			<div className='container'>
 				<div className='admin__btns'>
-					<button type='button' className='btn' onClick={teamsBtnHandler}>
+					<Button type='button' onClick={teamsBtnHandler}>
 						Teams
-					</button>
-					<button type='button' className='btn' onClick={playersBtnHandler}>
+					</Button>
+					<Button type='button' onClick={playersBtnHandler}>
 						Players
-					</button>
-					<button type='button' className='btn' onClick={handleLogout}>
+					</Button>
+					<Button type='button' onClick={handleLogout}>
 						Log Out
-					</button>
+					</Button>
 				</div>
 				{!state.isClosedTeams && <TeamsList data={teams} />}
 				{!state.isClosedPlayers && <PlayersList data={players} />}

@@ -17,7 +17,7 @@
 	cursor: pointer;
 	outline: none;
 	box-shadow: var(--shadow);
-	transition: var(--transition);
+	transition: box-shadow 0.3s ease;
 }
 
 .form__control:focus,

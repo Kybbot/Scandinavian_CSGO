@@ -5,27 +5,28 @@
 
 .member__nickname {
 	font-weight: 500;
-	margin-bottom: 5px;
+	margin: 0 0 5px 0;
 }
 
 .member__fullName {
 	font-weight: 300;
-	margin-bottom: 5px;
+	margin: 0 0 5px 0;
 }
 
 .member__age {
 	font-weight: 100;
 	font-size: 12px;
+	margin: 0;
 }
 
-.member img {
+.member__img {
 	height: 120px;
 	width: 120px;
 	border-radius: var(--radius);
 	margin-bottom: 5px;
 }
 
-.member .member__fullName {
+.member__fullName {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;

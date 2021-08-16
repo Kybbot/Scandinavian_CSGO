@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
+import { Button } from '../../components';
 import { fetchTeams, setShowAbout } from '../../redux/reducers/teamsSlice';
 
 const countrys = ['Sweden', 'Denmark', 'Finland', 'Mix'];
@@ -33,9 +34,7 @@ const Form = () => {
 									</option>
 								))}
 							</select>
-							<button type='submit' className='btn'>
-								Submit
-							</button>
+							<Button type='submit'>Submit</Button>
 						</div>
 					</form>
 				</div>

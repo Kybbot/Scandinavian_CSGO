@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
+
 import { useAuth } from '../../context/AuthContext';
+import { Button } from '../../components';
 
 const Signup = () => {
 	const { signup } = useAuth();
@@ -41,26 +43,23 @@ const Signup = () => {
 			<div className='admin-form__signup'>
 				<h2 className='text-center'>Sign Up</h2>
 				{error && <div>{error}</div>}
-				<form className='admin-form admin-form--column' onSubmit={handleSubmit}>
-					<fieldset className='admin-form__fieldset w-100' id='email'>
-						<label className='admin-form__label'>Email</label>
-						<input className='admin-form__input' type='email' ref={emailRef} required />
-					</fieldset>
-					<fieldset className='admin-form__fieldset w-100' id='password'>
-						<label className='admin-form__label'>Password</label>
-						<input className='admin-form__input' type='password' ref={passwordRef} required />
-					</fieldset>
-					<fieldset className='admin-form__fieldset w-100' id='password-confirm'>
-						<label className='admin-form__label'>Password</label>
-						<input className='admin-form__input' type='password' ref={passwordConfirmRef} required />
-					</fieldset>
-					<button disabled={loading} className='btn w-100' type='submit'>
+				<form className='admin-form' onSubmit={handleSubmit}>
+					<label className='admin-form__label'>
+						Email <input className='admin-form__input' type='email' ref={emailRef} required />
+					</label>
+					<label className='admin-form__label'>
+						Password <input className='admin-form__input' type='password' ref={passwordRef} required />
+					</label>
+					<label className='admin-form__label'>
+						Password <input className='admin-form__input' type='password' ref={passwordConfirmRef} required />
+					</label>
+					<Button type='submit' disabled={loading}>
 						Sign Up
-					</button>
+					</Button>
 				</form>
-				<div className='text-center'>
+				<p className='text-center'>
 					Already have an account? <Link to='/login'>Log in</Link>
-				</div>
+				</p>
 			</div>
 		</div>
 	);

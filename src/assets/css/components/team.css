@@ -11,7 +11,7 @@
 	box-shadow: var(--shadow);
 	cursor: pointer;
 	outline: none;
-	transition: var(--transition);
+	transition: border 0.3s ease;
 }
 
 .team:focus {

@@ -2,6 +2,7 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 import PropTypes from 'prop-types';
 
+import { Button } from '../../components';
 import Edit from '../../assets/icons/Edit';
 
 const img = 'data/players-img/';
@@ -69,100 +70,108 @@ const AdminPlayer = ({ player }) => {
 				<div className='admin-player__age'>{age}</div>
 				<div className='admin-player__country'>{country}</div>
 				<div className='admin-player__team'>{team}</div>
-				<button type='button' className='admin-player__edit' onClick={editChange}>
+				<Button additionalClass='admin__edit' onClick={editChange}>
 					<Edit size='18' />
-				</button>
+				</Button>
 			</div>
 			{edit && (
 				<form onSubmit={formHandler} className='admin-form'>
 					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>Player nickname</label>
-						<input
-							className='admin-form__input'
-							value={form.nickname}
-							name='nickname'
-							type='text'
-							placeholder='Nickname'
-							pattern='\w+'
-							required
-							onChange={handleInputChange}
-						/>
-						<label className='admin-form__label'>Player name</label>
-						<input
-							className='admin-form__input'
-							value={form.fullName}
-							name='fullName'
-							type='text'
-							placeholder='Name'
-							pattern="[A-Z][A-Za-z' -_]+"
-							required
-							onChange={handleInputChange}
-						/>
+						<label className='admin-form__label'>
+							Player nickname
+							<input
+								className='admin-form__input'
+								value={form.nickname}
+								name='nickname'
+								type='text'
+								placeholder='Nickname'
+								pattern='\w+'
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
+						<label className='admin-form__label'>
+							Player name
+							<input
+								className='admin-form__input'
+								value={form.fullName}
+								name='fullName'
+								type='text'
+								placeholder='Name'
+								pattern="[A-Z][A-Za-z' -_]+"
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
+						<label className='admin-form__label'>
+							Player{' '}
+							<input
+								className='admin-form__input'
+								value={form.age}
+								name='age'
+								type='text'
+								placeholder='Age'
+								pattern='[0-9]{4}-[0-9]{2}-[0-9]{2}'
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
+						<label className='admin-form__label'>
+							Player country
+							<input
+								className='admin-form__input'
+								value={form.country}
+								name='country'
+								type='text'
+								placeholder='Country'
+								pattern="[A-Z][A-Za-z' -_]+"
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
+						<label className='admin-form__label'>
+							Player team
+							<input
+								className='admin-form__input'
+								value={form.team}
+								name='team'
+								type='text'
+								placeholder='Team'
+								pattern="[A-Z][A-Za-z' -_]+"
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
+						<label className='admin-form__label'>
+							Player instagram
+							<input
+								className='admin-form__input'
+								value={form.instagram}
+								name='instagram'
+								type='text'
+								placeholder='Instagram nickname'
+								pattern='^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$'
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
 					</fieldset>
 					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>Player age</label>
-						<input
-							className='admin-form__input'
-							value={form.age}
-							name='age'
-							type='text'
-							placeholder='Age'
-							pattern='[0-9]{4}-[0-9]{2}-[0-9]{2}'
-							required
-							onChange={handleInputChange}
-						/>
-						<label className='admin-form__label'>Player country</label>
-						<input
-							className='admin-form__input'
-							value={form.country}
-							name='country'
-							type='text'
-							placeholder='Country'
-							pattern="[A-Z][A-Za-z' -_]+"
-							required
-							onChange={handleInputChange}
-						/>
+						<label className='admin-form__label'>
+							Player story
+							<textarea
+								className='admin-form__desc'
+								value={form.story}
+								name='story'
+								required
+								onChange={handleInputChange}
+							/>
+						</label>
 					</fieldset>
-					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>Player team</label>
-						<input
-							className='admin-form__input'
-							value={form.team}
-							name='team'
-							type='text'
-							placeholder='Team'
-							pattern="[A-Z][A-Za-z' -_]+"
-							required
-							onChange={handleInputChange}
-						/>
-						<label className='admin-form__label'>Player instagram</label>
-						<input
-							className='admin-form__input'
-							value={form.instagram}
-							name='instagram'
-							type='text'
-							placeholder='Instagram nickname'
-							pattern='^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$'
-							required
-							onChange={handleInputChange}
-						/>
-					</fieldset>
-					<fieldset className='admin-form__fieldset admin-form__fieldset--full'>
-						<label className='admin-form__label'>Player story</label>
-						<textarea
-							className='admin-form__desc admin-form__desc--full'
-							value={form.story}
-							name='story'
-							required
-							onChange={handleInputChange}
-						/>
-					</fieldset>
-					<button className='btn' type='submit'>
-						Update
-					</button>
-					<button onClick={deleteBtnHandler} className='btn' type='button'>
+					<Button type='submit'>Update</Button>
+					<Button onClick={deleteBtnHandler} type='button'>
 						Delete
-					</button>
+					</Button>
 				</form>
 			)}
 		</div>

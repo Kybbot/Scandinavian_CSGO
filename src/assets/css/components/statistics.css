@@ -14,6 +14,7 @@
 }
 
 .statistics__item {
+	width: 170px;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -27,7 +28,6 @@
 	gap: var(--gap);
 	border-radius: var(--radius);
 	box-shadow: var(--shadow);
-	transition: var(--transition);
 }
 
 .statistics__item::before {
@@ -40,10 +40,6 @@
 	background-color: rgba(17, 132, 34, 0.2);
 	border-radius: var(--radius);
 	z-index: 1;
-}
-
-.statistics__item:hover {
-	box-shadow: var(--shadow);
 }
 
 .statistics__img {

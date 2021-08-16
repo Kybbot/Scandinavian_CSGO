@@ -17,6 +17,10 @@
 	opacity: 0.5;
 }
 
+.all-players__info div:nth-child(n + 4) {
+	place-self: center;
+}
+
 .all-players__info::after {
 	content: '';
 	position: absolute;
@@ -31,14 +35,14 @@
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	align-items: center;
+	gap: 10px;
 	color: var(--main-text);
-	text-decoration: none;
 	background-color: var(--blocks-bg);
 	border: 1px solid #dee1e6;
 	border-radius: var(--radius);
 	padding: 10px;
 	margin-bottom: calc(var(--gap) / 2);
-	transition: var(--transition);
+	transition: box-shadow 0.3s ease;
 }
 
 .all-players__player:hover {
@@ -48,6 +52,7 @@
 .all-players__img {
 	height: 40px;
 	width: 40px;
+	display: block;
 }
 
 .all-players__nickname {
@@ -56,6 +61,12 @@
 
 .all-players__name {
 	font-weight: 500;
+}
+
+.all-players__age,
+.all-players__country,
+.all-players__team {
+	place-self: center;
 }
 
 .all-players__form {

@@ -10,10 +10,7 @@ const Statistics = React.memo(({ items }) => {
 			statistics.push(
 				<div className='statistics__item' key={key} style={{ backgroundImage: `url(${`${flag + key}-map.webp`})` }}>
 					<img src={`${flag + key}.png`} alt={key} className='statistics__img' />
-					<div
-						className='stati {
-						stics__container'
-					>
+					<div className='statistics__container'>
 						<div className='statistics__country'>{key}</div>
 						<div className='statistics__number'>{items[key]} players</div>
 					</div>

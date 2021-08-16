@@ -3,8 +3,29 @@
 		flex-wrap: wrap;
 	}
 
-	.player .player__info {
+	.player__info {
 		margin-left: 0;
+	}
+
+	.player__fullname {
+		margin-bottom: revert;
+	}
+}
+
+@media (max-width: 750px) {
+	.admin-player__container div:nth-child(3),
+	.admin-player__container div:nth-child(4) {
+		display: none;
+	}
+	.players-list__info div:nth-child(3),
+	.players-list__info div:nth-child(4) {
+		display: none;
+	}
+
+	.players-list__info,
+	.admin-player__container {
+		grid-template-columns: 40px repeat(3, 1fr) 35px;
+		gap: 20px;
 	}
 }
 
@@ -14,28 +35,141 @@
 	}
 }
 
+@media (max-width: 650px) {
+	.all-players__name,
+	.all-players__age,
+	.all-players__info div:nth-child(3),
+	.all-players__info div:nth-child(4) {
+		display: none;
+	}
+
+	.all-players__info,
+	.all-players__player {
+		grid-template-columns: 40px repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.all-players__age,
+	.all-players__country,
+	.all-players__team {
+		place-self: auto;
+	}
+
+	.all-players__info div:nth-child(n + 4) {
+		place-self: auto;
+	}
+
+	.admin-form__fieldset {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	.admin-team__name {
+		font-size: 14px;
+	}
+
+	.admin-team__container div:nth-child(n + 3) {
+		font-size: 12px;
+	}
+}
+
 @media (max-width: 515px) {
 	.teams__row {
 		justify-content: center;
 	}
 }
 
+@media (max-width: 500px) {
+	.admin-team__container {
+		grid-template-columns: repeat(3, 1fr) 35px;
+	}
+
+	.admin-team__container div:nth-child(n + 4) {
+		display: none;
+	}
+
+	.teams-list__info {
+		grid-template-columns: repeat(3, 1fr) 35px;
+	}
+
+	.teams-list__info div:nth-child(4),
+	.teams-list__info div:nth-child(5) {
+		display: none;
+	}
+}
+
+@media (max-width: 460px) {
+	.all-players__nickname {
+		font-size: 14px;
+	}
+
+	.all-players__country,
+	.all-players__team,
+	.all-players__info {
+		font-size: 12px;
+	}
+
+	.admin-player__nickname {
+		font-size: 14px;
+	}
+
+	.admin-player__country,
+	.admin-player__team,
+	.players-list__info {
+		font-size: 12px;
+	}
+}
+
 @media (max-width: 440px) {
-	.player .player__bio {
+	.player__bio {
 		flex: 1 1 auto;
 	}
 
-	.player .player__nickname {
+	.player__nickname {
 		font-size: 40px;
 		font-weight: bold;
 	}
 
-	.player .player__fullname {
+	.player__fullname {
 		font-size: 20px;
 	}
 
-	.player .player__info .player__story {
+	.player__story {
 		font-size: 18px;
 		line-height: 32px;
+	}
+}
+
+@media (max-width: 400px) {
+	.statistics {
+		justify-content: center;
+	}
+
+	.all-players__info,
+	.all-players__player {
+		grid-template-columns: 30px repeat(3, 1fr);
+		gap: 10px;
+	}
+
+	.all-players__img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.admin-player__img,
+	.admin-team__img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (max-width: 380px) {
+	.form__group {
+		justify-content: center;
+	}
+
+	.all-players__form {
+		justify-content: center;
 	}
 }

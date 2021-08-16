@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import RotateButton from '../../components/RotateButton';
+
 const Sort = React.memo(({ items, name, onClickSort }) => {
 	const [visiblePopup, setVisiblePopup] = React.useState(false);
 
@@ -25,13 +27,11 @@ const Sort = React.memo(({ items, name, onClickSort }) => {
 		<div className='sort'>
 			<div className='sort__label'>
 				{name}
-				<button
+				<RotateButton
+					additionalClass={`${visiblePopup ? 'rotate-btn--rotate' : ''}`}
 					type='button'
-					className={`sort__btn ${visiblePopup ? 'sort__btn--rotate' : ''}`}
 					onClick={toggleVisiblePopup}
-				>
-					^
-				</button>
+				/>
 			</div>
 			{visiblePopup && (
 				<div className='sort_popup'>

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import RotateButton from '../../components/RotateButton';
+import ChevronUp from '../../assets/icons/ChevronUp';
 import { setPlayer } from '../../redux/reducers/teamsSlice';
 import convertDate from '../../util/converDate';
 
@@ -35,28 +37,36 @@ const Panel = ({ name, close, members }) => {
 		<div className='panel'>
 			<div className='panel__name'>
 				{name}
-				<button type='button' onClick={panelBtnHandler} className={`panel__btn ${isclose ? '' : 'panel__btn--rotate'}`}>
-					^
-				</button>
+				<RotateButton
+					additionalClass={`${isclose ? '' : 'rotate-btn--rotate'}`}
+					type='button'
+					onClick={panelBtnHandler}
+				/>
 			</div>
 			<div ref={content} style={{ maxHeight: `${height}` }} className='panel__content'>
 				{members.length ? (
 					members.map((member) => (
 						<div key={member.nickname} className='member'>
 							<Link to={`/player/${member.nickname}`} onClick={() => imgClickHandler(member)}>
-								<img src={img + (member.photo ? member.photo : 'blankplayer.svg')} alt={member.nickname} />
+								<img
+									className='member__img'
+									src={img + (member.photo ? member.photo : 'blankplayer.svg')}
+									alt={member.nickname}
+								/>
 							</Link>
-							<div className='member__nickname' title={member.nickname}>
+							<p className='member__nickname' title={member.nickname}>
 								{member.nickname}
-							</div>
-							<div className='member__fullName' title={member.fullName}>
+							</p>
+							<p className='member__fullName' title={member.fullName}>
 								{member.fullName}
-							</div>
-							<div className='member__age'>{convertDate(member.age)}</div>
+							</p>
+							<time dateTime={member.age} className='member__age'>
+								{convertDate(member.age)}
+							</time>
 						</div>
 					))
 				) : (
-					<div>Empty</div>
+					<p>Empty</p>
 				)}
 			</div>
 		</div>
