@@ -40,18 +40,18 @@ const Signup = () => {
 
 	return (
 		<div className='container'>
-			<div className='admin-form__signup'>
+			<div className='admin__form-signup'>
 				<h2 className='text-center'>Sign Up</h2>
 				{error && <div>{error}</div>}
-				<form className='admin-form' onSubmit={handleSubmit}>
-					<label className='admin-form__label'>
-						Email <input className='admin-form__input' type='email' ref={emailRef} required />
+				<form className='admin__form' onSubmit={handleSubmit}>
+					<label className='admin__form-label'>
+						Email <input className='admin__form-input' type='email' ref={emailRef} required />
 					</label>
-					<label className='admin-form__label'>
-						Password <input className='admin-form__input' type='password' ref={passwordRef} required />
+					<label className='admin__form-label'>
+						Password <input className='admin__form-input' type='password' ref={passwordRef} required />
 					</label>
-					<label className='admin-form__label'>
-						Password <input className='admin-form__input' type='password' ref={passwordConfirmRef} required />
+					<label className='admin__form-label'>
+						Password <input className='admin__form-input' type='password' ref={passwordConfirmRef} required />
 					</label>
 					<Button type='submit' disabled={loading}>
 						Sign Up

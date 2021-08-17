@@ -31,17 +31,17 @@ const Login = () => {
 
 	return (
 		<div className='container'>
-			<div className='admin-form__signup'>
+			<div className='admin__form-login'>
 				<h2 className='text-center'>Log In</h2>
 				{error && <div>{error}</div>}
-				<form className='admin-form' onSubmit={handleSubmit}>
-					<label className='admin-form__label'>
+				<form className='admin__form' onSubmit={handleSubmit}>
+					<label className='admin__form-label'>
 						Email
-						<input className='admin-form__input' type='email' ref={emailRef} required />
+						<input className='admin__form-input' type='email' ref={emailRef} required />
 					</label>
-					<label className='admin-form__label'>
+					<label className='admin__form-label'>
 						Password
-						<input className='admin-form__input' type='password' ref={passwordRef} required />
+						<input className='admin__form-input' type='password' ref={passwordRef} required />
 					</label>
 					<Button type='submit' disabled={loading}>
 						Log In

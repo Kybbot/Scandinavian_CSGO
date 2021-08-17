@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import RotateButton from '../../components/RotateButton';
-import ChevronUp from '../../assets/icons/ChevronUp';
 import { setPlayer } from '../../redux/reducers/teamsSlice';
 import convertDate from '../../util/converDate';
 

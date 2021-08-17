@@ -36,15 +36,15 @@ const AddNewPlayer = () => {
 			body: JSON.stringify(form),
 		});
 	};
-
+	console.log('AddNewPlayer');
 	return (
-		<form onSubmit={formHandler} className='admin-form'>
-			<fieldset className='admin-form__fieldset'>
-				<label htmlFor='playerNickname' className='admin-form__label'>
+		<form onSubmit={formHandler} className='admin__form'>
+			<fieldset className='admin__form-fieldset'>
+				<label htmlFor='playerNickname' className='admin__form-label'>
 					Player nickname
 					<input
 						id='playerNickname'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.nickname}
 						name='nickname'
 						type='text'
@@ -54,11 +54,11 @@ const AddNewPlayer = () => {
 						onChange={handleInputChange}
 					/>
 				</label>
-				<label htmlFor='playerName' className='admin-form__label'>
+				<label htmlFor='playerName' className='admin__form-label'>
 					Player name
 					<input
 						id='playerName'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.fullName}
 						name='fullName'
 						type='text'
@@ -68,11 +68,11 @@ const AddNewPlayer = () => {
 						onChange={handleInputChange}
 					/>
 				</label>
-				<label htmlFor='playerAge' className='admin-form__label'>
+				<label htmlFor='playerAge' className='admin__form-label'>
 					Player age
 					<input
 						id='playerAge'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.age}
 						name='age'
 						type='text'
@@ -82,11 +82,11 @@ const AddNewPlayer = () => {
 						onChange={handleInputChange}
 					/>
 				</label>
-				<label htmlFor='playerCountry' className='admin-form__label'>
+				<label htmlFor='playerCountry' className='admin__form-label'>
 					Player country
 					<input
 						id='playerCountry'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.country}
 						name='country'
 						type='text'
@@ -96,11 +96,11 @@ const AddNewPlayer = () => {
 						onChange={handleInputChange}
 					/>
 				</label>
-				<label htmlFor='playerTeam' className='admin-form__label'>
+				<label htmlFor='playerTeam' className='admin__form-label'>
 					Player team
 					<input
 						id='playerTeam'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.team}
 						name='team'
 						type='text'
@@ -110,11 +110,11 @@ const AddNewPlayer = () => {
 						onChange={handleInputChange}
 					/>
 				</label>
-				<label htmlFor='playerInst' className='admin-form__label'>
+				<label htmlFor='playerInst' className='admin__form-label'>
 					Player instagram
 					<input
 						id='playerInst'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.instagram}
 						name='instagram'
 						type='text'
@@ -123,11 +123,11 @@ const AddNewPlayer = () => {
 						onChange={handleInputChange}
 					/>
 				</label>
-				<label htmlFor='playerPhoto' className='admin-form__label'>
+				<label htmlFor='playerPhoto' className='admin__form-label'>
 					Player photo name
 					<input
 						id='playerPhoto'
-						className='admin-form__input'
+						className='admin__form-input'
 						value={form.photo}
 						name='photo'
 						type='text'
@@ -137,12 +137,12 @@ const AddNewPlayer = () => {
 					/>
 				</label>
 			</fieldset>
-			<fieldset className='admin-form__fieldset'>
-				<label htmlFor='playerStory' className='admin-form__label'>
+			<fieldset className='admin__form-fieldset'>
+				<label htmlFor='playerStory' className='admin__form-label'>
 					Player story
 					<textarea
 						id='playerStory'
-						className='admin-form__desc'
+						className='admin__form-desc'
 						value={form.story}
 						name='story'
 						placeholder='Player story...'

@@ -34,20 +34,12 @@ const AdminTeam = ({ team }) => {
 		pastMembers,
 	});
 
-	React.useEffect(() => {
-		setForm((state) => ({
-			...state,
-			members: textarea,
-		}));
-	}, [textarea]);
-
 	const editChange = () => {
 		setEdit(!edit);
 	};
 
 	const handleInputChange = (event) => {
-		const { name } = event.target;
-		const { value } = event.target;
+		const { name, value } = event.target;
 
 		setForm((state) => ({
 			...state,
@@ -62,6 +54,11 @@ const AdminTeam = ({ team }) => {
 		setTextarea((state) => ({
 			...state,
 			[name]: value,
+		}));
+
+		setForm((state) => ({
+			...state,
+			members: textarea,
 		}));
 	};
 
@@ -89,13 +86,13 @@ const AdminTeam = ({ team }) => {
 	};
 
 	return (
-		<div className='admin-team'>
-			<div className='admin-team__container'>
-				<img className='admin-team__img' src={img + logo} alt={name} />
-				<div className='admin-team__name'>{name}</div>
-				<div className='admin-team__country'>{country}</div>
-				<div className='admin-team__based'>{based}</div>
-				<div className='admin-team__webSite' title={webSite}>
+		<div className='admin__team'>
+			<div className='admin__team-container'>
+				<img className='admin__img' src={img + logo} alt={name} />
+				<div className='admin__team-name'>{name}</div>
+				<div className='admin__team-country'>{country}</div>
+				<div className='admin__team-based'>{based}</div>
+				<div className='admin__team-webSite' title={webSite}>
 					{webSite}
 				</div>
 				<Button additionalClass='admin__edit' onClick={editChange}>
@@ -103,12 +100,12 @@ const AdminTeam = ({ team }) => {
 				</Button>
 			</div>
 			{edit && (
-				<form onSubmit={formHandler} className='admin-form'>
-					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>
+				<form onSubmit={formHandler} className='admin__form'>
+					<fieldset className='admin__form-fieldset'>
+						<label className='admin__form-label'>
 							Name of team
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.name}
 								name='name'
 								type='text'
@@ -118,10 +115,10 @@ const AdminTeam = ({ team }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Name of country
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.country}
 								name='country'
 								type='text'
@@ -131,10 +128,10 @@ const AdminTeam = ({ team }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Year of based
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.based}
 								name='based'
 								type='text'
@@ -144,10 +141,10 @@ const AdminTeam = ({ team }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Link to webSite
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.webSite}
 								name='webSite'
 								type='text'
@@ -158,23 +155,23 @@ const AdminTeam = ({ team }) => {
 							/>
 						</label>
 					</fieldset>
-					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>
+					<fieldset className='admin__form-fieldset'>
+						<label className='admin__form-label'>
 							Names of current members
 							<textarea
 								value={textarea.currentMembers}
 								name='currentMembers'
-								className='admin-form__desc admin-form__desc--full'
+								className='admin__form-desc'
 								required
 								onChange={handleTextareaChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Names of past members
 							<textarea
 								value={textarea.pastMembers}
 								name='pastMembers'
-								className='admin-form__desc admin-form__desc--full'
+								className='admin__form-desc'
 								required
 								onChange={handleTextareaChange}
 							/>

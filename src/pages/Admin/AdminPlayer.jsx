@@ -60,27 +60,27 @@ const AdminPlayer = ({ player }) => {
 	};
 
 	return (
-		<div className='admin-player'>
-			<div className='admin-player__container'>
+		<div className='admin__player'>
+			<div className='admin__player-container'>
 				<LazyLoad height={40} once offset={20}>
-					<img className='admin-player__img' src={img + (photo || 'blankplayer.svg')} alt={nickname} />
+					<img className='admin__img' src={img + (photo || 'blankplayer.svg')} alt={nickname} />
 				</LazyLoad>
-				<div className='admin-player__nickname'>{nickname}</div>
-				<div className='admin-player__name'>{fullName}</div>
-				<div className='admin-player__age'>{age}</div>
-				<div className='admin-player__country'>{country}</div>
-				<div className='admin-player__team'>{team}</div>
+				<div className='admin__player-nickname'>{nickname}</div>
+				<div className='admin__player-name'>{fullName}</div>
+				<div className='admin__player-age'>{age}</div>
+				<div className='admin__player-country'>{country}</div>
+				<div className='admin__player-team'>{team}</div>
 				<Button additionalClass='admin__edit' onClick={editChange}>
 					<Edit size='18' />
 				</Button>
 			</div>
 			{edit && (
-				<form onSubmit={formHandler} className='admin-form'>
-					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>
+				<form onSubmit={formHandler} className='admin__form'>
+					<fieldset className='admin__form-fieldset'>
+						<label className='admin__form-label'>
 							Player nickname
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.nickname}
 								name='nickname'
 								type='text'
@@ -90,10 +90,10 @@ const AdminPlayer = ({ player }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Player name
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.fullName}
 								name='fullName'
 								type='text'
@@ -103,10 +103,10 @@ const AdminPlayer = ({ player }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Player{' '}
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.age}
 								name='age'
 								type='text'
@@ -116,10 +116,10 @@ const AdminPlayer = ({ player }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Player country
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.country}
 								name='country'
 								type='text'
@@ -129,10 +129,10 @@ const AdminPlayer = ({ player }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Player team
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.team}
 								name='team'
 								type='text'
@@ -142,10 +142,10 @@ const AdminPlayer = ({ player }) => {
 								onChange={handleInputChange}
 							/>
 						</label>
-						<label className='admin-form__label'>
+						<label className='admin__form-label'>
 							Player instagram
 							<input
-								className='admin-form__input'
+								className='admin__form-input'
 								value={form.instagram}
 								name='instagram'
 								type='text'
@@ -156,11 +156,11 @@ const AdminPlayer = ({ player }) => {
 							/>
 						</label>
 					</fieldset>
-					<fieldset className='admin-form__fieldset'>
-						<label className='admin-form__label'>
+					<fieldset className='admin__form-fieldset'>
+						<label className='admin__form-label'>
 							Player story
 							<textarea
-								className='admin-form__desc'
+								className='admin__form-desc'
 								value={form.story}
 								name='story'
 								required
