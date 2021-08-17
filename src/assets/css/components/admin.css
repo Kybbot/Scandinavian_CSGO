@@ -7,13 +7,12 @@
 }
 
 /* Admin list */
-.players-list,
-.teams-list {
+.admin__list {
 	margin-bottom: var(--gap);
 }
 
-.players-list__info,
-.teams-list__info {
+.admin__players-list,
+.admin__teams-list {
 	position: relative;
 	display: grid;
 	align-items: center;
@@ -21,16 +20,16 @@
 	opacity: 0.5;
 }
 
-.players-list__info {
+.admin__players-list {
 	grid-template-columns: repeat(6, 1fr) 35px;
 }
 
-.teams-list__info {
+.admin__teams-list {
 	grid-template-columns: repeat(5, 1fr) 35px;
 }
 
-.players-list__info::after,
-.teams-list__info::after {
+.admin__players-list::after,
+.admin__teams-list::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -42,13 +41,13 @@
 }
 
 /* Admin player & team */
-.admin-player,
-.admin-team {
+.admin__player,
+.admin__team {
 	position: relative;
 }
 
-.admin-player::after,
-.admin-team::after {
+.admin__player::after,
+.admin__team::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -59,7 +58,7 @@
 	background-color: grey;
 }
 
-.admin-player__container {
+.admin__player-container {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr) 35px;
 	align-items: center;
@@ -67,21 +66,33 @@
 	padding: 10px 0;
 }
 
-.admin-player__img,
-.admin-team__img {
+.admin__team-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr) 35px;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.admin__img {
 	height: 40px;
 	width: 40px;
 	object-fit: contain;
 	display: block;
 }
 
-.admin-player__nickname,
-.admin-team__name {
+.admin__player-nickname,
+.admin__team-name {
 	font-weight: 700;
 }
 
-.admin-player__name {
+.admin__player-name {
 	font-weight: 500;
+}
+
+.admin__team-webSite {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .admin__edit {
@@ -93,29 +104,16 @@
 	box-shadow: none;
 }
 
-.admin-team__container {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr) 35px;
-	align-items: center;
-	padding: 10px 0;
-}
-
-.admin-team__webSite {
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
 /* Admin form */
-.admin-form {
+.admin__form {
 	display: flex;
 	flex-direction: column;
 	gap: var(--gap);
 	padding: 10px 0;
 }
 
-.admin-form__signup,
-.admin-form__login {
+.admin__form-signup,
+.admin__form-login {
 	max-width: 500px;
 	margin: 0 auto;
 	padding: 10px;
@@ -124,7 +122,7 @@
 	box-shadow: var(--shadow);
 }
 
-.admin-form__label {
+.admin__form-label {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -133,7 +131,7 @@
 	flex: 1 1 auto;
 }
 
-.admin-form__fieldset {
+.admin__form-fieldset {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -143,15 +141,15 @@
 	margin: 0;
 }
 
-.admin-form__fieldset input {
+.admin__form-fieldset .admin__form-input {
 	margin-bottom: calc(var(--gap) / 2);
 }
 
-.admin-form__fieldset input:last-child {
+.admin__form-fieldset .admin__form-input:last-child {
 	margin-bottom: 0;
 }
 
-.admin-form__input {
+.admin__form-input {
 	background-color: var(--blocks-bg);
 	border-radius: var(--radius);
 	box-shadow: var(--shadow);
@@ -159,12 +157,11 @@
 	padding: 5px;
 }
 
-.admin-form__input:active,
-.admin-form__input:focus {
+.admin__form-input:focus {
 	box-shadow: var(--outline);
 }
 
-.admin-form__desc {
+.admin__form-desc {
 	height: 100px;
 	background-color: var(--blocks-bg);
 	border-radius: var(--radius);
@@ -174,7 +171,6 @@
 	resize: vertical;
 }
 
-.admin-form__desc:active,
-.admin-form__desc:focus {
+.admin__form-desc:focus {
 	box-shadow: var(--outline);
 }

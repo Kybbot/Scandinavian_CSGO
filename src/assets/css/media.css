@@ -13,17 +13,17 @@
 }
 
 @media (max-width: 750px) {
-	.admin-player__container div:nth-child(3),
-	.admin-player__container div:nth-child(4) {
+	.admin__player-container div:nth-child(3),
+	.admin__player-container div:nth-child(4) {
 		display: none;
 	}
-	.players-list__info div:nth-child(3),
-	.players-list__info div:nth-child(4) {
+	.admin__players-list div:nth-child(3),
+	.admin__players-list div:nth-child(4) {
 		display: none;
 	}
 
-	.players-list__info,
-	.admin-player__container {
+	.admin__players-list,
+	.admin__player-container {
 		grid-template-columns: 40px repeat(3, 1fr) 35px;
 		gap: 20px;
 	}
@@ -59,17 +59,17 @@
 		place-self: auto;
 	}
 
-	.admin-form__fieldset {
+	.admin__form-fieldset {
 		flex-direction: column;
 	}
 }
 
 @media (max-width: 600px) {
-	.admin-team__name {
+	.admin__team-name {
 		font-size: 14px;
 	}
 
-	.admin-team__container div:nth-child(n + 3) {
+	.admin__team-container div:nth-child(n + 3) {
 		font-size: 12px;
 	}
 }
@@ -81,20 +81,20 @@
 }
 
 @media (max-width: 500px) {
-	.admin-team__container {
+	.admin__team-container {
 		grid-template-columns: repeat(3, 1fr) 35px;
 	}
 
-	.admin-team__container div:nth-child(n + 4) {
+	.admin__teams-list {
+		grid-template-columns: repeat(3, 1fr) 35px;
+	}
+
+	.admin__team-container div:nth-child(n + 4) {
 		display: none;
 	}
 
-	.teams-list__info {
-		grid-template-columns: repeat(3, 1fr) 35px;
-	}
-
-	.teams-list__info div:nth-child(4),
-	.teams-list__info div:nth-child(5) {
+	.admin__teams-list div:nth-child(4),
+	.admin__teams-list div:nth-child(5) {
 		display: none;
 	}
 }
@@ -110,13 +110,13 @@
 		font-size: 12px;
 	}
 
-	.admin-player__nickname {
+	.admin__player-nickname {
 		font-size: 14px;
 	}
 
-	.admin-player__country,
-	.admin-player__team,
-	.players-list__info {
+	.admin__player-country,
+	.admin__player-team,
+	.admin__players-list {
 		font-size: 12px;
 	}
 }
@@ -157,8 +157,7 @@
 		height: 30px;
 	}
 
-	.admin-player__img,
-	.admin-team__img {
+	.admin__img {
 		width: 30px;
 		height: 30px;
 	}
