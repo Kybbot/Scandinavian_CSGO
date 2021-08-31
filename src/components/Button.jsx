@@ -12,4 +12,8 @@ Button.propTypes = {
 	additionalClass: PropTypes.string,
 };
 
+Button.defaultProps = {
+	additionalClass: '',
+};
+
 export default Button;
