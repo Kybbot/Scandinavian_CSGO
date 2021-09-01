@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import RotateButton from '../../components/RotateButton';
+import { RotateButton } from '../../components';
 
 const Sort = React.memo(({ items, name, onClickSort }) => {
 	const [visiblePopup, setVisiblePopup] = React.useState(false);

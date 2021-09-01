@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { getAdminIsClosedTeams, getAdminIsClosedPlayers } from '../../redux/selectors';
 import { openTeams, openPlayers } from '../../redux/reducers/adminSlice';
 import { useAuth } from '../../context/AuthContext';
-import Button from '../../components/Button';
+import { Button } from '../../components';
 import TeamsList from './TeamsList';
 import PlayersList from './PlayersList';
 

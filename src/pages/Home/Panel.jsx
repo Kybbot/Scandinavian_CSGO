@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import RotateButton from '../../components/RotateButton';
+import { RotateButton } from '../../components';
 import { setPlayer } from '../../redux/reducers/teamsSlice';
 import convertDate from '../../util/converDate';
 

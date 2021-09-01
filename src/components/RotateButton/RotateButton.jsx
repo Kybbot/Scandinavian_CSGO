@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChevronUp from '../assets/icons/ChevronUp';
+import ChevronUp from '../../assets/icons/ChevronUp';
 
 const RotateButton = ({ additionalClass, ...props }) => (
 	<button {...props} className={`rotate-btn ${additionalClass ? additionalClass : ''}`}>
@@ -10,6 +10,10 @@ const RotateButton = ({ additionalClass, ...props }) => (
 
 RotateButton.propTypes = {
 	additionalClass: PropTypes.string,
+};
+
+RotateButton.defaultProps = {
+	additionalClass: '',
 };
 
 export default RotateButton;
